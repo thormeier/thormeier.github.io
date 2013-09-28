@@ -1,4 +1,4 @@
-github.io
-=========
+thormeier.github.io
+===================
 
-Simple one-page HTML for presentation purposes
+Simple HTML/CSS page for presentation purposes.
