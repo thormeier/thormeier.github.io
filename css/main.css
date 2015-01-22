@@ -62,6 +62,8 @@ h1 {
 }
 .contact-box_img {
     background-color: #7A84FF;
+}
+.contact-box span, .contact-box_img {
     max-width: 150px;
     width: 100%;
 }
