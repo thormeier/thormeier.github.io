@@ -8,14 +8,14 @@ h1 {
 .me-img {
     margin-bottom: 20px;
 }
-.me-img img {
+.me-img, .me-img img {
     max-width: 180px;
     width: 100%;
 }
 .project-img {
     margin-bottom: 20px;
 }
-.project-img, .project-img img {
+.project-img img {
     max-width: 300px;
     width: 100%;
 }
