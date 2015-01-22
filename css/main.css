@@ -6,12 +6,18 @@ h1 {
     margin-bottom: 20px;
 }
 .me-img {
-    width: 180px;
     margin-bottom: 20px;
 }
+.me-img img {
+    max-width: 180px;
+    width: 100%;
+}
 .project-img {
-    width: 300px;
     margin-bottom: 20px;
+}
+.project-img img {
+    max-width: 300px;
+    width: 100%;
 }
 .row, .project {
     padding-bottom: 20px;
@@ -52,9 +58,10 @@ h1 {
 }
 .contact-box span {
     display: block;
-    width: 150px;
     margin: 0 auto;
 }
 .contact-box_img {
     background-color: #7A84FF;
+    max-width: 150px;
+    width: 100%;
 }
