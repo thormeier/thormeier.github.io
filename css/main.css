@@ -15,7 +15,7 @@ h1 {
 .project-img {
     margin-bottom: 20px;
 }
-.project-img img {
+.project-img, .project-img img {
     max-width: 300px;
     width: 100%;
 }
