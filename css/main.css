@@ -44,10 +44,12 @@ h1 {
     box-shadow: 0 0 10px 3px #181818;
     position: relative;
 }
-.opacity-changer {
-    opacity: 0.7;
-    -webkit-transition: opacity 0.2s ease;
-    transition: opacity 0.2s ease;
+@media only screen and (min-width : 768px) {
+    .opacity-changer {
+        opacity: 0.7;
+        -webkit-transition: opacity 0.2s ease;
+        transition: opacity 0.2s ease;
+    }
 }
 .opacity-changer:hover {
     opacity: 1;
