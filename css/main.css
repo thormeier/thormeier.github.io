@@ -26,17 +26,20 @@ h1 {
     padding-bottom: 0;
 }
 .row.row-dark {
-    background-color: #0E134F;
-    color: #AAA;
+    background: url(../img/stone_texture.png);
+    color: #CCC;
     border-color: #AAA;
 }
+.row.row-dark small {
+    color: #AAA;
+}
 .row.row-normal {
-    background-color: #7A84FF;
+    background: url(../img/sand_texture.png);
     color: #222;
     border-color: #222;
 }
 .row.row-light {
-    background-color: #FFFFFF;
+    background: url(../img/wood_texture.png);
     color: #222;
     border-color: #222;
 }
@@ -46,7 +49,7 @@ h1 {
 }
 @media only screen and (min-width : 768px) {
     .opacity-changer {
-        opacity: 0.7;
+        opacity: 0.8;
         -webkit-transition: opacity 0.2s ease;
         transition: opacity 0.2s ease;
     }
