@@ -61,14 +61,13 @@ h1 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.contact-box span {
+.contact-box > a {
     display: block;
-    margin: 0 auto;
 }
 .contact-box_img {
     background-color: #7A84FF;
-}
-.contact-box span, .contact-box_img {
+    display: block;
+    margin: 0 auto;
     max-width: 150px;
     width: 100%;
 }
