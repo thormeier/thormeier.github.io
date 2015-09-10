@@ -12,12 +12,22 @@ h1 {
     max-width: 180px;
     width: 100%;
 }
+.me-img img {
+    -moz-box-shadow: 0 0 5px 2px #888;
+    -webkit-box-shadow: 0 0 5px 2px #888;
+    box-shadow: 0 0 5px 2px #888;
+}
 .project-img {
     margin-bottom: 20px;
 }
 .project-img , .project-img img {
     max-width: 300px;
     width: 100%;
+}
+.project-img > img {
+    -moz-box-shadow: 0 0 5px 2px #888;
+    -webkit-box-shadow: 0 0 5px 2px #888;
+    box-shadow: 0 0 5px 2px #888;
 }
 .row, .project {
     padding-bottom: 20px;
@@ -70,4 +80,7 @@ h1 {
     margin: 0 auto;
     max-width: 150px;
     width: 100%;
+    -moz-box-shadow: 0 0 5px 2px #AAA;
+    -webkit-box-shadow: 0 0 5px 2px #AAA;
+    box-shadow: 0 0 5px 2px #AAA;
 }
