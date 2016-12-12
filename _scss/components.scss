@@ -44,18 +44,25 @@
     }
 }
 .title-captioned {
+    text-decoration: none;
     &:after {
         background-color: $dark-color;
         content: attr(title);
-        display: none;
-        position: absolute;
-        margin: 10px auto;
+        display: block;
+        position: relative;
+        margin: $spacing-unit-small auto;
+        padding: $spacing-unit-tiny;
         width: auto;
+        color: $alt-color-lighter;
+        border-radius: $border-radius-default;
+        opacity: 0;
+        transition: opacity .2s ease-in-out;
+        z-index: 10;
         &:hover {
-            display: block;
+            opacity: 1;
         }
     }
     &:hover:after{
-        display: block;
+        opacity: 1;
     }
 }
