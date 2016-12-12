@@ -1,0 +1,60 @@
+/*----------------------------------------*\
+  BOX
+\*----------------------------------------*/
+
+.#{$namespace}box {
+  padding: $spacing-unit-default;
+
+  > :first-child {
+    margin-top: 0;
+  }
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+
+/**
+ * Spacings
+ */
+
+.#{$namespace}box--tight {
+  padding: 0;
+}
+
+.#{$namespace}box--tiny {
+  padding: $spacing-unit-tiny;
+}
+
+.#{$namespace}box--small {
+  padding: $spacing-unit-small;
+}
+
+.#{$namespace}box--large {
+  padding: $spacing-unit-large;
+}
+
+.#{$namespace}box--huge {
+  padding: $spacing-unit-huge;
+}
+
+
+/**
+ * Styles
+ */
+
+.#{$namespace}box--default {
+  color: $box-default-color;
+
+  background-color: $box-default-bkg-color;
+}
+
+.#{$namespace}box--primary {
+  color: $box-primary-color;
+
+  background-color: $box-primary-bkg-color;
+}

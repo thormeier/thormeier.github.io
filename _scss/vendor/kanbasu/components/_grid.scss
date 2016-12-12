@@ -1,0 +1,114 @@
+/*----------------------------------------*\
+  GRID
+\*----------------------------------------*/
+
+.#{$namespace}grid {
+  display: block;
+  margin-left: -$spacing-unit-default;
+
+  // Remove extra-space between items due to inline block
+  font-size: 0;
+}
+
+  .#{$namespace}grid__item {
+    display: inline-block;
+    width: 100%;
+    padding-left: $spacing-unit-default;
+
+    // Reset font size to default (see comment above)
+    font-size: $font-size-default;
+    vertical-align: top;
+  }
+
+
+/**
+ * Gutters size
+ */
+
+.#{$namespace}grid--tight {
+  margin-left: 0;
+
+  > .#{$namespace}grid__item {
+    padding-left: 0;
+  }
+}
+
+.#{$namespace}grid--tiny {
+  margin-left: -$spacing-unit-tiny;
+
+  > .#{$namespace}grid__item {
+    padding-left: $spacing-unit-tiny;
+  }
+}
+
+.#{$namespace}grid--small {
+  margin-left: -$spacing-unit-small;
+
+  > .#{$namespace}grid__item {
+    padding-left: $spacing-unit-small;
+  }
+}
+
+.#{$namespace}grid--large {
+  margin-left: -$spacing-unit-large;
+
+  > .#{$namespace}grid__item {
+    padding-left: $spacing-unit-large;
+  }
+}
+
+.#{$namespace}grid--huge {
+  margin-left: -$spacing-unit-huge;
+
+  > .#{$namespace}grid__item {
+    padding-left: $spacing-unit-huge;
+  }
+}
+
+
+/**
+ * Alignment
+ */
+
+.#{$namespace}grid--center {
+  text-align: center;
+
+  > .#{$namespace}grid__item {
+    text-align: left;
+  }
+}
+
+.#{$namespace}grid--right {
+  text-align: right;
+
+  > .#{$namespace}grid__item {
+    text-align: left;
+  }
+}
+
+.#{$namespace}grid--middle {
+  > .#{$namespace}grid__item {
+    vertical-align: middle;
+  }
+}
+
+.#{$namespace}grid--bottom {
+  > .#{$namespace}grid__item {
+    vertical-align: bottom;
+  }
+}
+
+
+/**
+ * Order
+ */
+
+.#{$namespace}grid--rev {
+  direction: rtl;
+  text-align: left;
+
+  > .#{$namespace}grid__item {
+    direction: ltr;
+    text-align: left;
+  }
+}
