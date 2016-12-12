@@ -1,0 +1,24 @@
+<div class="grid grid--tight">
+    <div class="grid__item w-1/1">
+        <h2 class="mrgt0">A selection of my work</h2>
+
+        {% for project in page.projects %}
+            <div class="media media--responsive pdgv">
+                <div class="media__left">
+                    <img src="img/{{ project.img }}" class="media__image shadowcaster shadowcaster--light">
+                </div>
+
+                <div class="media__body">
+                    <h3>
+                        <a href="{{ project.url }}" target="_blank">{{ project.title }}</a>
+                    </h3>
+                    {% for paragraph in project.paragraphs %}
+                    <p>
+                        {{ paragraph }}
+                    </p>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

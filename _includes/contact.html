@@ -1,0 +1,19 @@
+<div class="grid grid--tight">
+    <div class="grid__item w-1/1">
+        <h2 class="mrgt0">Reach me</h2>
+    </div>
+</div>
+
+<div class="grid grid--small">
+    {% for contact in page.contact_infos %}
+        <div class="grid__item w-1/2 sm-w-1/2 md-w-1/3 lg-w-1/3 text-center xs-pdgv sm-pdgv md-pdgv lg-pdgv pdgh">
+            <a href="{{ contact.url }}" target="_blank" title="{{ contact.text }}">
+                <img
+                    src="img/{{ contact.img }}"
+                    alt="{{ contact.text }}"
+                    class="img-hover img-responsive img-centered img-round shadowcaster shadowcaster--light background--color-brand"
+                >
+            </a>
+        </div>
+    {% endfor %}
+</div>

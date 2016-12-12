@@ -1,0 +1,61 @@
+.shadowcaster {
+    position: relative;
+}
+.shadowcaster--dark {
+    box-shadow: 0 0 $spacing-unit-tiny 2px $dark-color;
+}
+.shadowcaster--light {
+    box-shadow: 0 0 $spacing-unit-tiny 2px $alt-color-dark;
+}
+
+.header .header__title {
+    margin: 0;
+    padding: 0;
+}
+
+.background--texture-stone {
+    color: $alt-color-lighter;
+    background-image: url('../img/stone_texture.png');
+}
+.background--texture-sand {
+    background-image: url('../img/sand_texture.png');
+    background-attachment: fixed;
+}
+.background--texture-wood {
+    background-image: url('../img/wood_texture.png');
+    background-attachment: fixed;
+}
+.background--color-brand {
+    background-color: #7A84FF;
+}
+
+.img-round {
+    border-radius: 100%;
+}
+.img-centered {
+    display: block;
+    margin: auto;
+}
+.img-hover {
+    transition: opacity .2s ease-in-out;
+    opacity: .8;
+    &:hover {
+        opacity: 1;
+    }
+}
+.title-captioned {
+    &:after {
+        background-color: $dark-color;
+        content: attr(title);
+        display: none;
+        position: absolute;
+        margin: 10px auto;
+        width: auto;
+        &:hover {
+            display: block;
+        }
+    }
+    &:hover:after{
+        display: block;
+    }
+}

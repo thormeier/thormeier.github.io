@@ -1,0 +1,30 @@
+h1 {
+    margin-top: 0;
+    @media #{$mq-lg} {
+        font-size: $font-size-heading-huge;
+    }
+    @media #{$mq-md} {
+        font-size: $font-size-heading-huge;
+    }
+    @media #{$mq-sm} {
+        font-size: $font-size-heading-xlarge;
+    }
+    @media #{$mq-xs} {
+        font-size: $font-size-heading-xlarge;
+    }
+}
+
+h2 {
+    @media #{$mq-lg} {
+        font-size: $font-size-heading-large;
+    }
+    @media #{$mq-md} {
+        font-size: $font-size-heading-large;
+    }
+    @media #{$mq-sm} {
+        font-size: $font-size-heading-medium;
+    }
+    @media #{$mq-xs} {
+        font-size: $font-size-heading-medium;
+    }
+}
