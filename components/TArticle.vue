@@ -81,7 +81,7 @@ export default {
     dateFormatted() {
       const d = this.date
       const year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d)
-      const month = new Intl.DateTimeFormat('en', { month: 'numeric' }).format(
+      const month = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(
         d
       )
       const day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d)
