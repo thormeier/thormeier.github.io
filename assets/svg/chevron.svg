@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="250" height="250">
+  <path
+    d="
+      M 30 62.5 Q 130 110, 125 187.5
+      M 125 187.5 Q 130 130, 220 62.5
+    "
+    fill="none"
+    stroke="#000"
+    stroke-width="25"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+  />
+</svg>

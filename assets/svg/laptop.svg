@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="250" height="250">
+  <path
+    d="
+      M 38 38 Q 132 28 208 38
+      M 208 38 Q 198 120 208 151
+      M 208 151 Q 80 141 38 151
+      M 38 151 Q 48 122 38 38
+      M 38 151 Q 29 160 20 198
+      M 20 198 Q 12 218 40 218
+      M 40 218 Q 160 208 218 218
+      M 218 218 Q 233 218 232 208
+      M 232 208 Q 215 180 208 151
+      M 87 65 Q 75 75 65 98
+      M 108 73 Q 98 78 90 98
+      M 60 180 Q 120 170 180 180
+    "
+    fill="none"
+    stroke="#000"
+    stroke-width="25"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+  />
+</svg>

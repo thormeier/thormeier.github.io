@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300">
+  <path
+    d="M 80 53 Q 60 110, 54 140"
+    stroke-linejoin="round"
+    stroke-linecap="square"
+    fill="none"
+    stroke="#FF9812"
+    opacity="0.35"
+    stroke-width="80"
+  />
+  <path
+    d="M 150 75 Q 118 130, 80 230"
+    stroke-linejoin="round"
+    stroke-linecap="square"
+    fill="none"
+    stroke="#FF9812"
+    opacity="0.35"
+    stroke-width="80"
+  />
+
+  <path
+    d="M 225 77 Q 178 135, 150 210"
+    stroke-linejoin="round"
+    stroke-linecap="square"
+    fill="none"
+    stroke="#FF9812"
+    opacity="0.35"
+    stroke-width="80"
+  />
+
+  <path
+    d="M 305 72 Q 255 135, 213 215"
+    stroke-linejoin="round"
+    stroke-linecap="square"
+    fill="none"
+    stroke="#FF9812"
+    opacity="0.35"
+    stroke-width="80"
+  />
+  <path
+    d="M 382 75 Q 300 135, 278 215"
+    stroke-linejoin="round"
+    stroke-linecap="square"
+    fill="none"
+    stroke="#FF9812"
+    opacity="0.35"
+    stroke-width="80"
+  />
+  <path
+    d="M 470 80 Q 400 135, 350 235"
+    stroke-linejoin="round"
+    stroke-linecap="square"
+    fill="none"
+    stroke="#FF9812"
+    opacity="0.35"
+    stroke-width="80"
+  />
+  <path
+    d="M 520 120 Q 470 150, 420 230"
+    stroke-linejoin="round"
+    stroke-linecap="square"
+    fill="none"
+    stroke="#FF9812"
+    opacity="0.35"
+    stroke-width="80"
+  />
+  <path
+    d="M 540 190 Q 500 220, 490 230"
+    stroke-linejoin="round"
+    stroke-linecap="square"
+    fill="none"
+    stroke="#FF9812"
+    opacity="0.35"
+    stroke-width="80"
+  />
+</svg>
