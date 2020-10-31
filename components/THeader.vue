@@ -4,7 +4,7 @@
   >
     <span class="font-script text-3xl">
       <router-link to="/">
-        thormeier.dev
+        thormeier.github.io
       </router-link>
     </span>
 
