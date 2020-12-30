@@ -19,6 +19,7 @@
       :url="a.url"
       :likes="a.likes"
       :platform="a.platform"
+      :tags="a.tags"
       class="mb-20"
     />
   </div>
@@ -41,7 +42,9 @@ export default {
             alt: 'An ibex'
           },
           date: new Date('2017-12-06'),
-          url: 'https://www.liip.ch/en/blog/shapefiles-of-avalanches-and-ibexes'
+          url:
+            'https://www.liip.ch/en/blog/shapefiles-of-avalanches-and-ibexes',
+          tags: []
         },
         {
           title: 'Deploy your Nuxt.js app to platform.sh',
@@ -53,7 +56,8 @@ export default {
           },
           date: new Date('2018-08-06'),
           url:
-            'https://www.liip.ch/en/blog/deploy-your-nuxt-js-app-to-platform-sh'
+            'https://www.liip.ch/en/blog/deploy-your-nuxt-js-app-to-platform-sh',
+          tags: []
         },
         {
           title: 'From coasters to Vuex',
@@ -64,7 +68,8 @@ export default {
             alt: 'A lot of cargo containers'
           },
           date: new Date('2018-10-09'),
-          url: 'https://www.liip.ch/en/blog/from-coasters-to-vuex'
+          url: 'https://www.liip.ch/en/blog/from-coasters-to-vuex',
+          tags: []
         },
         {
           title: 'How to point at a screen with your phone',
@@ -76,7 +81,8 @@ export default {
           },
           date: new Date('2020-07-01'),
           url:
-            'https://www.liip.ch/en/blog/how-to-point-at-a-screen-with-your-phone'
+            'https://www.liip.ch/en/blog/how-to-point-at-a-screen-with-your-phone',
+          tags: []
         },
         {
           title: 'NEXPLORER or a steep learning curve',
@@ -87,7 +93,9 @@ export default {
             alt: 'A whiteboard with calculations'
           },
           date: new Date('2020-08-03'),
-          url: 'https://www.liip.ch/en/blog/nexplorer-or-a-steep-learning-curve'
+          url:
+            'https://www.liip.ch/en/blog/nexplorer-or-a-steep-learning-curve',
+          tags: []
         }
       ]
     }
@@ -111,7 +119,8 @@ export default {
         likes: p.public_reactions_count,
         url: p.canonical_url,
         platform: 'dev.to',
-        date: new Date(p.created_at)
+        date: new Date(p.published_at),
+        tags: p.tag_list
       }))
 
       const all = [...liipPosts, ...devToPosts]

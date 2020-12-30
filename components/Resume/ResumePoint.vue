@@ -6,9 +6,13 @@
       </span>
 
       <span class="md:whitespace-no-wrap">
-        (<template v-if="dateEnd === 'today'">since </template
+        (<template
+          v-if="!dateEnd || formatDate(dateEnd) === formatDate(new Date())"
+          >since </template
         >{{ dateStartFormatted
-        }}<template v-if="dateEnd && dateEnd !== 'today'">
+        }}<template
+          v-if="dateEnd && formatDate(dateEnd) !== formatDate(new Date())"
+        >
           &ndash; {{ dateEndFormatted }}</template
         >)
       </span>
@@ -31,8 +35,9 @@ export default {
       required: true
     },
     dateEnd: {
+      type: Date,
       required: false,
-      default: ''
+      default: null
     },
     title: {
       type: String,

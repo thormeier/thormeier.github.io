@@ -101,7 +101,7 @@ export default {
           points: [
             {
               dateStart: new Date('2014-01-01'),
-              dateEnd: 'today',
+              dateEnd: new Date(),
               title: 'Senior Web Developer',
               where: 'Liip AG, Zurich, Switzerland',
               what:
@@ -126,11 +126,11 @@ export default {
               dateStart: new Date('2015-09-16'),
               dateEnd: new Date('2020-05-12'),
               title:
-                'Studies for Bachelor of Science FHNW in computer sciences with specialization on design and management',
+                'Studies for Bachelor of Science FHNW in computer sciences with specialization in design and management',
               where:
                 'University of Applied Sciences and Arts Northwestern Switzerland FHNW, School of Engineering, Brugg, Switzerland',
               what:
-                '4 1/2 years part-time studies, participated in several bigger projects, programming tutor'
+                '4 1/2 years part-time studies, participated in several larger projects, programming tutor'
             },
             {
               dateStart: new Date('2006-08-01'),
@@ -150,10 +150,10 @@ export default {
             {
               dateStart: new Date('2020-05-12'),
               title:
-                'Bachelor of Science FHNW in computer sciences with specialization on design and management',
+                'Bachelor of Science FHNW in computer sciences with specialization in design and management',
               where:
                 'University of Applied Sciences and Arts Northwestern Switzerland FHNW, School of Engineering, Brugg, Switzerland',
-              what: ''
+              what: 'Swiss grade 5.3'
             },
             {
               dateStart: new Date('2018-04-28'),

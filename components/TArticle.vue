@@ -19,11 +19,19 @@
             </span>
           </h2>
 
-          <div v-if="likes" class="flex pb-3 items-center pl-3">
-            <heart class="w-icon h-icon mr-2" aria-hidden="true" />
-            <span aria-label="Likes/reactions">
-              {{ likes }}
-            </span>
+          <div class="flex align-center mb-3">
+            <div v-if="likes" class="flex items-center pl-3 pr-6">
+              <heart class="w-icon h-icon mr-2" aria-hidden="true" />
+              <span aria-label="Likes/reactions">
+                {{ likes }}
+              </span>
+            </div>
+
+            <ul v-if="tags.length > 0" class="flex">
+              <li v-for="tag in tags" class="mr-4 px-2 curved-border">
+                #{{ tag }}
+              </li>
+            </ul>
           </div>
 
           <p class="pb-3">
@@ -74,6 +82,10 @@ export default {
     likes: {
       type: Number,
       default: null
+    },
+    tags: {
+      type: Array,
+      default: () => []
     }
   },
 
