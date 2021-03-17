@@ -27,8 +27,8 @@
               </span>
             </div>
 
-            <ul v-if="tags.length > 0" class="flex">
-              <li v-for="tag in tags" class="mr-4 px-2 curved-border">
+            <ul v-if="tags.length > 0" class="flex flex-wrap">
+              <li v-for="tag in tags" class="mr-4 mb-4 px-2 curved-border">
                 #{{ tag }}
               </li>
             </ul>
