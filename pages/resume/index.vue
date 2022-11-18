@@ -87,6 +87,17 @@ import SchoolHat from '../../assets/svg/school.svg?inline'
 import Award from '../../assets/svg/award.svg?inline'
 
 export default {
+  head: {
+    title: "Pascal Thormeier's resume",
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Find out about Pascal Thormeier'
+      }
+    ]
+  },
+
   mixins: [Animation],
 
   data() {
@@ -170,17 +181,23 @@ export default {
             },
             {
               dateStart: new Date('2019-07-22'),
-              title: 'First Lieutenant of Civil Defence',
+              title: 'Captain of Civil Protection',
               where: 'ZSO Hardwald, Kloten, Switzerland',
-              what: '"Zivilschutz", responsible for around 60 people'
+              what:
+                '"Zivilschutz", company commander ("Kompaniekommandant") responsible for around 120 people'
             }
           ]
         },
         {
           id: 'awards',
-          label: 'Awards',
+          label: 'Awards & Achievements',
           icon: Award,
           points: [
+            {
+              dateStart: new Date('2021-02-09'),
+              title: 'dev.to Top 7 articles of the week',
+              what: 'twice in 2021, once in 2022'
+            },
             {
               dateStart: new Date('2019-02-08'),
               title: 'German Design Award - Winner Interactive User Experience',

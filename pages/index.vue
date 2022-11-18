@@ -146,6 +146,17 @@
 import Animation from '@/mixins/Animation'
 
 export default {
+  head: {
+    title: 'Get to know Pascal Thormeier',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Pascal Thormeier presents himself.'
+      }
+    ]
+  },
+
   mixins: [Animation],
 
   data() {

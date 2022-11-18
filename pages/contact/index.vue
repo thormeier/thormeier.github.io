@@ -34,6 +34,17 @@ import Devto from '../../assets/svg/devto.svg?inline'
 import Github from '../../assets/svg/github.svg?inline'
 
 export default {
+  head: {
+    title: 'How to contact Pascal Thormeier',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Contact details for Pascal Thormeier'
+      }
+    ]
+  },
+
   data() {
     return {
       profiles: [

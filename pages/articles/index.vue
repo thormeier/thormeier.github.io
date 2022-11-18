@@ -29,10 +29,64 @@
 import axios from 'axios'
 
 export default {
+  head: {
+    title: 'Articles by Pascal Thormeier',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'All articles written on various sources by Pascal Thormeier'
+      }
+    ]
+  },
+
   data() {
     return {
       rawDevTo: [],
-      rawLiip: [
+      rawOther: [
+        {
+          title: '10 tips for Vue beginners - stuff to get you started fast',
+          lead:
+            "Vue is amazing. Seriously, Evan You and the community have done an amazing job with it and I've spent a good part of my career working with Vue now. It kind of has become my go-to framework over the years and I would absolutely recommend it to everyone.",
+          image: {
+            src: require('~/assets/images/vue_updivision.png'),
+            alt: '10 tips for Vue beginners'
+          },
+          date: new Date('2022-02-09'),
+          url:
+            'https://updivision.com/blog/post/10-tips-for-vue-beginners-stuff-to-get-you-started-fast',
+          tags: [],
+          platform: 'updivision.com'
+        },
+        {
+          title:
+            'How Nuxt3, Tailwind and FastAPI helped us kick-start a business in no time',
+          lead:
+            'Four weeks from the start to go live. Included? A payment provider, an external service, a fantastic design, great Lighthouse scores and a delighted client. How did we manage that?',
+          image: {
+            src: require('~/assets/images/nuxt3.webp'),
+            alt: 'Nuxt3 + FastAPI = Rocket'
+          },
+          date: new Date('2022-08-15'),
+          url:
+            'https://www.liip.ch/de/blog/how-nuxt3-tailwind-and-fastapi-helped-us-kick-start-a-business-in-no-time',
+          tags: [],
+          platform: 'liip.ch'
+        },
+        {
+          title: "Code reviews: Dos, Don'ts and a How-to",
+          lead:
+            "Our circle recently revisited our definition of done. One point: code reviews. They did happen, but often couldn't unfold their full potential. Question: How could we improve them?",
+          image: {
+            src: require('~/assets/images/glitch.jpg'),
+            alt: 'A glichty image of people working together'
+          },
+          date: new Date('2021-04-21'),
+          url:
+            'https://www.liip.ch/de/blog/code-reviews-dos-donts-and-a-how-to',
+          tags: [],
+          platform: 'liip.ch'
+        },
         {
           title: 'Shapefiles - Of avalanches and ibexes',
           lead:
@@ -44,7 +98,8 @@ export default {
           date: new Date('2017-12-06'),
           url:
             'https://www.liip.ch/en/blog/shapefiles-of-avalanches-and-ibexes',
-          tags: []
+          tags: [],
+          platform: 'liip.ch'
         },
         {
           title: 'Deploy your Nuxt.js app to platform.sh',
@@ -57,7 +112,8 @@ export default {
           date: new Date('2018-08-06'),
           url:
             'https://www.liip.ch/en/blog/deploy-your-nuxt-js-app-to-platform-sh',
-          tags: []
+          tags: [],
+          platform: 'liip.ch'
         },
         {
           title: 'From coasters to Vuex',
@@ -69,7 +125,8 @@ export default {
           },
           date: new Date('2018-10-09'),
           url: 'https://www.liip.ch/en/blog/from-coasters-to-vuex',
-          tags: []
+          tags: [],
+          platform: 'liip.ch'
         },
         {
           title: 'How to point at a screen with your phone',
@@ -82,7 +139,8 @@ export default {
           date: new Date('2020-07-01'),
           url:
             'https://www.liip.ch/en/blog/how-to-point-at-a-screen-with-your-phone',
-          tags: []
+          tags: [],
+          platform: 'liip.ch'
         },
         {
           title: 'NEXPLORER or a steep learning curve',
@@ -95,7 +153,8 @@ export default {
           date: new Date('2020-08-03'),
           url:
             'https://www.liip.ch/en/blog/nexplorer-or-a-steep-learning-curve',
-          tags: []
+          tags: [],
+          platform: 'liip.ch'
         }
       ]
     }
@@ -103,9 +162,12 @@ export default {
 
   computed: {
     posts() {
-      const liipPosts = this.rawLiip.map((p) => ({
+      if (this.rawDevTo.length === 0) {
+        return []
+      }
+
+      const otherPosts = this.rawOther.map((p) => ({
         ...p,
-        platform: 'liip.ch',
         likes: null
       }))
 
@@ -123,7 +185,7 @@ export default {
         tags: p.tag_list
       }))
 
-      const all = [...liipPosts, ...devToPosts]
+      const all = [...otherPosts, ...devToPosts]
 
       return all.sort((a, b) => b.date - a.date)
     }
@@ -136,6 +198,7 @@ export default {
 
     this.rawDevTo = response.data
   },
+
   fetchOnServer: false
 }
 </script>
