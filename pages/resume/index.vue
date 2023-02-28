@@ -111,6 +111,14 @@ export default {
           icon: Laptop,
           points: [
             {
+              dateStart: new Date('2022-02-18'),
+              dateEnd: new Date(),
+              title: 'Course Author',
+              where: 'Educative.io',
+              what:
+                'Wrote the course titled "Advanced VueJS: Build Better Applications Efficiently", containing 51 lessons, 57 code playgrounds and 8 quizzes: https://www.educative.io/courses/advanced-vuejs-build-better-applications-efficiently'
+            },
+            {
               dateStart: new Date('2014-01-01'),
               dateEnd: new Date(),
               title: 'Senior Web Developer',
