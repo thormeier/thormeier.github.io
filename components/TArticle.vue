@@ -1,8 +1,8 @@
 <template>
   <a :href="url" :title="title" class="block">
     <article class="curved-border p-3 m-4">
-      <div class="flex -mx-4 flex-wrap">
-        <div class="w-full mb-6 md:w-1/2 md:mb-0 lg:w-1/3 px-4 py-3">
+      <div class="-mx-4">
+        <div class="mb-6 px-4 py-3">
           <div class="image">
             <img
               :src="image.src"
@@ -11,7 +11,7 @@
             />
           </div>
         </div>
-        <div class="w-full md:w-1/2 md:px-3 lg:w-2/3 px-4">
+        <div class="px-6">
           <h2 class="text-2xl lg:text-3xl font-script pb-3">
             {{ title }}
             <span class="text-xl opacity-50 whitespace-no-wrap">

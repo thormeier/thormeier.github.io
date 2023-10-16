@@ -4,7 +4,7 @@
   >
     <span class="font-script text-3xl">
       <router-link to="/">
-        thormeier.github.io
+        thormeier.dev
       </router-link>
     </span>
 
@@ -18,25 +18,49 @@
 
     <nav
       :class="{ hidden: !open }"
-      class="flex flex-wrap justify-around mt-6 md:mt-0 w-full md:w-auto md:flex"
+      class="flex flex-wrap justify-around mt-6 md:mt-0 w-full md:w-auto md:flex gap-6"
     >
-      <router-link to="/articles" class="md:mr-6">
+      <router-link to="/articles">
         <t-button class="curved-border">
           Articles
         </t-button>
       </router-link>
 
-      <router-link to="/resume" class="md:mr-6">
+      <router-link to="/resume">
         <t-button class="curved-border">
           Resume
         </t-button>
       </router-link>
 
-      <router-link to="/contact" class="md:mr-6">
+      <router-link to="/contact">
         <t-button class="curved-border">
           Contact
         </t-button>
       </router-link>
+
+      <router-link to="/mastering-css-grid">
+        <t-button class="curved-border">
+          My book
+        </t-button>
+      </router-link>
+
+      <a href="https://linktr.ee/thormeier">
+        <t-button class="curved-border">
+          Linktree
+        </t-button>
+      </a>
+
+      <a href="https://www.buymeacoffee.com/pthormeier">
+        <t-button class="curved-border">
+          Buy me a coffee
+        </t-button>
+      </a>
+
+      <a href="https://www.buymeacoffee.com/pthormeier">
+        <t-button class="curved-border">
+          Support me via PayPal
+        </t-button>
+      </a>
     </nav>
   </header>
 </template>

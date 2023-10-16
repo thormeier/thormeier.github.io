@@ -23,10 +23,44 @@
         </sticky-note>
       </div>
     </div>
+
+    <section class="mb-6 px-4">
+      <viewport-watcher @inViewport="animate('businessBox')">
+        <border-animator
+          :is-active="animations.businessBox.hasAnimated"
+          class="mx-2 md:mx-6 lg:mx-8 my-3 p-6 pt-8 md:py-8"
+        >
+          <t-subtitle>
+            Business contact
+          </t-subtitle>
+
+          <t-paragraph>
+            In case you want to contact me for business (commissions or similar)
+            please use the following email address:
+          </t-paragraph>
+
+          <t-paragraph>
+            <a href="mailto:hello@thormeier.dev">
+              <t-button class="curved-border">
+                <span class="font-bold">
+                  hello@thormeier.dev
+                </span>
+              </t-button>
+            </a>
+          </t-paragraph>
+
+          <t-paragraph>
+            Please be aware that I will not be answering potential recruitment
+            emails for any software developer positions.
+          </t-paragraph>
+        </border-animator>
+      </viewport-watcher>
+    </section>
   </div>
 </template>
 
 <script>
+import Animation from '@/mixins/Animation'
 import Twitter from '../../assets/svg/twitter.svg?inline'
 import Linkedin from '../../assets/svg/linkedin.svg?inline'
 import Slideshare from '../../assets/svg/slideshare.svg?inline'
@@ -45,8 +79,16 @@ export default {
     ]
   },
 
+  mixins: [Animation],
+
   data() {
     return {
+      animations: {
+        businessBox: {
+          delay: 0,
+          hasAnimated: false
+        }
+      },
       profiles: [
         {
           title: 'Twitter',

@@ -1,6 +1,6 @@
-# thormeier.github.io
+# thormeier.dev
 
-> thormeier.github.io built with Nuxt and Tailwind.
+> thormeier.dev built with Nuxt and Tailwind.
 
 ## Build Setup
 

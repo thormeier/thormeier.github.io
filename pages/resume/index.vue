@@ -111,6 +111,14 @@ export default {
           icon: Laptop,
           points: [
             {
+              dateStart: new Date('2023-06-09'),
+              dateEnd: new Date(),
+              title: 'Book author',
+              where: 'Packt',
+              what:
+                'Mastering CSS Grid: A Comprehensive and Practical Guide to Creating Beautiful Layouts with CSS Grid. A 330 page book to learn all about CSS Grid.'
+            },
+            {
               dateStart: new Date('2022-02-18'),
               dateEnd: new Date(),
               title: 'Course Author',

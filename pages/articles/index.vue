@@ -9,19 +9,44 @@
       and blogs. Have a read!
     </p>
 
-    <t-article
-      v-for="(a, index) in posts"
-      :key="index"
-      :image="a.image"
-      :date="a.date"
-      :title="a.title"
-      :lead="a.lead"
-      :url="a.url"
-      :likes="a.likes"
-      :platform="a.platform"
-      :tags="a.tags"
-      class="mb-20"
-    />
+    <div class="grid md:grid-cols-1 lg:grid-cols-2">
+      <div>
+        <h2 class="font-script text-3xl md:text-4xl mt-3 mb-3 mx-3">
+          Articles on dev.to
+        </h2>
+        <t-article
+          v-for="(a, index) in devToPosts"
+          :key="index"
+          :image="a.image"
+          :date="a.date"
+          :title="a.title"
+          :lead="a.lead"
+          :url="a.url"
+          :likes="a.likes"
+          :platform="a.platform"
+          :tags="a.tags"
+          class="mb-20"
+        />
+      </div>
+      <div>
+        <h2 class="font-script text-3xl md:text-4xl mt-3 mb-3 mx-3">
+          Articles on liip.ch and other platforms
+        </h2>
+        <t-article
+          v-for="(a, index) in rawOther"
+          :key="index"
+          :image="a.image"
+          :date="a.date"
+          :title="a.title"
+          :lead="a.lead"
+          :url="a.url"
+          :likes="a.likes"
+          :platform="a.platform"
+          :tags="a.tags"
+          class="mb-20"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -161,6 +186,22 @@ export default {
   },
 
   computed: {
+    devToPosts() {
+      return this.rawDevTo.map((p) => ({
+        title: p.title,
+        image: {
+          src: p.cover_image || p.social_image,
+          alt: p.title
+        },
+        lead: p.description,
+        likes: p.public_reactions_count,
+        url: p.canonical_url,
+        platform: 'dev.to',
+        date: new Date(p.published_at),
+        tags: p.tag_list
+      }))
+    },
+
     posts() {
       if (this.rawDevTo.length === 0) {
         return []
