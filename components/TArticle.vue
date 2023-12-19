@@ -1,6 +1,6 @@
 <template>
   <a :href="url" :title="title" class="block">
-    <article class="curved-border p-3 m-4">
+    <article class="curved-border p-3 m-4 bg-white">
       <div class="-mx-4">
         <div class="mb-6 px-4 py-3">
           <div class="image">

@@ -56,7 +56,7 @@
         </t-button>
       </a>
 
-      <a href="https://www.buymeacoffee.com/pthormeier">
+      <a href="https://paypal.me/pthormeier">
         <t-button class="curved-border">
           Support me via PayPal
         </t-button>

@@ -70,18 +70,19 @@ export default {
       rawDevTo: [],
       rawOther: [
         {
-          title: '10 tips for Vue beginners - stuff to get you started fast',
+          title:
+            'Interview mit Pascal Thormeier, Alumni Studiengang Informatik Profilierung iCompetence',
           lead:
-            "Vue is amazing. Seriously, Evan You and the community have done an amazing job with it and I've spent a good part of my career working with Vue now. It kind of has become my go-to framework over the years and I would absolutely recommend it to everyone.",
+            'This interview with the head of the Computer Science and iCompetence program at the FHNW School of Engineering was published on the official blog "Computer Science Studies" of the FHNW. It is in German.',
           image: {
-            src: require('~/assets/images/vue_updivision.png'),
-            alt: '10 tips for Vue beginners'
+            src: require('~/assets/images/me.jpg'),
+            alt: 'A picture of me'
           },
-          date: new Date('2022-02-09'),
+          date: new Date('2023-12-08'),
           url:
-            'https://updivision.com/blog/post/10-tips-for-vue-beginners-stuff-to-get-you-started-fast',
+            'https://css-fhnw.ch/interview-pascal-thormeier-alumni-informatik-icompetence/',
           tags: [],
-          platform: 'updivision.com'
+          platform: 'css-fhnw.ch'
         },
         {
           title:
@@ -99,6 +100,20 @@ export default {
           platform: 'liip.ch'
         },
         {
+          title: '10 tips for Vue beginners - stuff to get you started fast',
+          lead:
+            "Vue is amazing. Seriously, Evan You and the community have done an amazing job with it and I've spent a good part of my career working with Vue now. It kind of has become my go-to framework over the years and I would absolutely recommend it to everyone.",
+          image: {
+            src: require('~/assets/images/vue_updivision.png'),
+            alt: '10 tips for Vue beginners'
+          },
+          date: new Date('2022-02-09'),
+          url:
+            'https://updivision.com/blog/post/10-tips-for-vue-beginners-stuff-to-get-you-started-fast',
+          tags: [],
+          platform: 'updivision.com'
+        },
+        {
           title: "Code reviews: Dos, Don'ts and a How-to",
           lead:
             "Our circle recently revisited our definition of done. One point: code reviews. They did happen, but often couldn't unfold their full potential. Question: How could we improve them?",
@@ -113,16 +128,30 @@ export default {
           platform: 'liip.ch'
         },
         {
-          title: 'Shapefiles - Of avalanches and ibexes',
+          title: 'NEXPLORER or a steep learning curve',
           lead:
-            'An excellent way to store spatial and geographical data, such as real estates, municipal boundaries, rivers, lakes, streets, you name it, together with metadata, such as names, IDs, year of establishment, etc. are shapefiles.',
+            "Two weeks for a questionnaire. Built from scratch. No existing API to use. Just an Excel sheet full of questions and answers. And we learned so much. Here's what!",
           image: {
-            src: require('~/assets/images/ibex.jpg'),
-            alt: 'An ibex'
+            src: require('~/assets/images/whiteboard.jpg'),
+            alt: 'A whiteboard with calculations'
           },
-          date: new Date('2017-12-06'),
+          date: new Date('2020-08-03'),
           url:
-            'https://www.liip.ch/en/blog/shapefiles-of-avalanches-and-ibexes',
+            'https://www.liip.ch/en/blog/nexplorer-or-a-steep-learning-curve',
+          tags: [],
+          platform: 'liip.ch'
+        },
+        {
+          title: 'How to point at a screen with your phone',
+          lead:
+            'Most people know laser pointers. Apple Remote offers something like a laser pointer for Keynote. But how about using your smartphone as a pointer device in a web app?',
+          image: {
+            src: require('~/assets/images/laptop.jpg'),
+            alt: 'A laptop on a desk with tape'
+          },
+          date: new Date('2020-07-01'),
+          url:
+            'https://www.liip.ch/en/blog/how-to-point-at-a-screen-with-your-phone',
           tags: [],
           platform: 'liip.ch'
         },
@@ -154,30 +183,16 @@ export default {
           platform: 'liip.ch'
         },
         {
-          title: 'How to point at a screen with your phone',
+          title: 'Shapefiles - Of avalanches and ibexes',
           lead:
-            'Most people know laser pointers. Apple Remote offers something like a laser pointer for Keynote. But how about using your smartphone as a pointer device in a web app?',
+            'An excellent way to store spatial and geographical data, such as real estates, municipal boundaries, rivers, lakes, streets, you name it, together with metadata, such as names, IDs, year of establishment, etc. are shapefiles.',
           image: {
-            src: require('~/assets/images/laptop.jpg'),
-            alt: 'A laptop on a desk with tape'
+            src: require('~/assets/images/ibex.jpg'),
+            alt: 'An ibex'
           },
-          date: new Date('2020-07-01'),
+          date: new Date('2017-12-06'),
           url:
-            'https://www.liip.ch/en/blog/how-to-point-at-a-screen-with-your-phone',
-          tags: [],
-          platform: 'liip.ch'
-        },
-        {
-          title: 'NEXPLORER or a steep learning curve',
-          lead:
-            "Two weeks for a questionnaire. Built from scratch. No existing API to use. Just an Excel sheet full of questions and answers. And we learned so much. Here's what!",
-          image: {
-            src: require('~/assets/images/whiteboard.jpg'),
-            alt: 'A whiteboard with calculations'
-          },
-          date: new Date('2020-08-03'),
-          url:
-            'https://www.liip.ch/en/blog/nexplorer-or-a-steep-learning-curve',
+            'https://www.liip.ch/en/blog/shapefiles-of-avalanches-and-ibexes',
           tags: [],
           platform: 'liip.ch'
         }
