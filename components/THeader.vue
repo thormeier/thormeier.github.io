@@ -44,19 +44,19 @@
         </t-button>
       </router-link>
 
-      <a href="https://linktr.ee/thormeier">
+      <a href="https://linktr.ee/thormeier" target="_blank">
         <t-button class="curved-border">
           Linktree
         </t-button>
       </a>
 
-      <a href="https://www.buymeacoffee.com/pthormeier">
+      <a href="https://www.buymeacoffee.com/pthormeier" target="_blank">
         <t-button class="curved-border">
           Buy me a coffee
         </t-button>
       </a>
 
-      <a href="https://paypal.me/pthormeier">
+      <a href="https://paypal.me/pthormeier" target="_blank">
         <t-button class="curved-border">
           Support me via PayPal
         </t-button>

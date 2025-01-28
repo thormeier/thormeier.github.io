@@ -29,7 +29,7 @@
               class="list-handdrawn ml-3 px-6 print:px-0 print:py-2 print:text-sm"
             >
               <li>Curious self-organized doer</li>
-              <li>Team player, able to take the lead</li>
+              <li>Team player, leader, coach</li>
               <li>Passionate about all things web</li>
               <li>Tech enthusiast in general</li>
             </ul>
@@ -111,6 +111,14 @@ export default {
           icon: Laptop,
           points: [
             {
+              dateStart: new Date('2025-03-01'),
+              dateEnd: new Date(),
+              title: 'First Aid instructor',
+              where: 'Samariterverein Region-Thalwil',
+              what:
+                "Giving courses in first aid (BLS-AED-SRC, emergency first aid for obtaining diver's licenses and IVR-1) on a voluntary basis."
+            },
+            {
               dateStart: new Date('2023-06-09'),
               dateEnd: new Date(),
               title: 'Book author',
@@ -149,6 +157,13 @@ export default {
           label: 'Education',
           icon: SchoolHat,
           points: [
+            {
+              dateStart: new Date('2023-06-25'),
+              dateEnd: new Date(),
+              title: 'First aider level 2 IVR 2021',
+              where: 'Samariter Schweiz',
+              what: 'Able to give advnced first aid in emergency situations.'
+            },
             {
               dateStart: new Date('2015-09-16'),
               dateEnd: new Date('2020-05-12'),

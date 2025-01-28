@@ -61,9 +61,8 @@
 
 <script>
 import Animation from '@/mixins/Animation'
-import Twitter from '../../assets/svg/twitter.svg?inline'
+import Bluesky from '../../assets/svg/bluesky.svg?inline'
 import Linkedin from '../../assets/svg/linkedin.svg?inline'
-import Slideshare from '../../assets/svg/slideshare.svg?inline'
 import Devto from '../../assets/svg/devto.svg?inline'
 import Github from '../../assets/svg/github.svg?inline'
 
@@ -91,9 +90,9 @@ export default {
       },
       profiles: [
         {
-          title: 'Twitter',
-          to: 'https://twitter.com/pthormeier',
-          icon: Twitter
+          title: 'Bluesky',
+          to: 'https://bsky.app/profile/thormeier.bsky.social',
+          icon: Bluesky
         },
         {
           title: 'dev.to',
@@ -109,11 +108,6 @@ export default {
           title: 'LinkedIn',
           to: 'https://www.linkedin.com/in/thormeier/',
           icon: Linkedin
-        },
-        {
-          title: 'Slideshare',
-          to: 'https://en.slideshare.net/Thormeier',
-          icon: Slideshare
         }
       ]
     }

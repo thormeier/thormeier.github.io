@@ -71,6 +71,22 @@ export default {
       rawOther: [
         {
           title:
+            'Using Unplugin, Tailwind, Storybook and Figma to create a design system that works',
+          lead:
+            "At Liip, we recently launched a full-fledged front end and a design system framework for the canton of Basel-Stadt, and we're excited to share it!",
+          image: {
+            src: require('~/assets/images/bsch.png'),
+            alt:
+              'A stylistic concrete staircase with the text "Liip presents bs.ch" written on it.'
+          },
+          date: new Date('2024-12-17'),
+          url:
+            'https://www.liip.ch/en/blog/using-unplugin-tailwind-storybook-and-figma-to-create-a-design-system-that-works',
+          tags: [],
+          platform: 'liip.ch'
+        },
+        {
+          title:
             'Interview mit Pascal Thormeier, Alumni Studiengang Informatik Profilierung iCompetence',
           lead:
             'This interview with the head of the Computer Science and iCompetence program at the FHNW School of Engineering was published on the official blog "Computer Science Studies" of the FHNW. It is in German.',
