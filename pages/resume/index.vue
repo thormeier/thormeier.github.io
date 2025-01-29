@@ -162,7 +162,7 @@ export default {
               dateEnd: new Date(),
               title: 'First aider level 2 IVR 2021',
               where: 'Samariter Schweiz',
-              what: 'Able to give advnced first aid in emergency situations.'
+              what: 'Able to give advanced first aid in emergency situations.'
             },
             {
               dateStart: new Date('2015-09-16'),
