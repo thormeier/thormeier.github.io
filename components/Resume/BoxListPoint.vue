@@ -2,9 +2,9 @@
   <ResumePoint>
     <template #title>
       <span class="font-bold">{{ title }}</span>
-      <span class="md:whitespace-no-wrap print:text-xs">
+      <span class="md:whitespace-nowrap print:whitespace-nowrap">
         (<template
-          v-if="!dateEnd"
+          v-if="dateEnd === undefined"
         >since </template>{{ dateStartFormatted
         }}<template
           v-if="dateEnd"
@@ -27,7 +27,7 @@
 export interface Point {
   title: string
   dateStart: string
-  dateEnd?: string
+  dateEnd?: string | null
   where?: string
   what: string
 }

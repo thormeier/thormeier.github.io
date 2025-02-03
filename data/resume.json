@@ -4,7 +4,7 @@
       "title": "bs.ch - Website for the Canton of Basel-Stadt",
       "techStack": "Drupal, Nuxt, Vue, GraphQL, TypeScript, Vite, MJML",
       "role": "Fullstack Developer, Frontend Developer, Software Architect",
-      "what": "Development of a digital desgin system as installable library, integration of MJML into Nuxt"
+      "what": "Development of a digital design system as installable library, integration of MJML into Nuxt, frontend & backend development"
     },
     {
       "title": "SV Group - Relaunch",
@@ -16,7 +16,7 @@
       "title": "ETH Immobilienökonomie",
       "techStack": "Vue, Express, MongoDB, SOAP, REST",
       "role": "Fullstack Developer, Software Architect, Interaction Designer",
-      "what": "E-learning app for students of architecture, simplifying complex calculationsand making them visible"
+      "what": "E-learning app for students of architecture, simplifying complex calculations and making them visible"
     },
     {
       "title": "Migros Product Catalogue & Migipedia",
@@ -27,7 +27,7 @@
     {
       "title": "Various open source and freelancing projects",
       "techStack": "PHP, JavaScript, TypeScript, Python, Java, Drupal, Symfony",
-      "what": "A wide variety of libraries, tools, bundles, packages, etc. used by many projects and hundreds of devs"
+      "what": "A wide variety of libraries, tools, bundles, packages, etc. used by many projects and hundreds of devs. Have a look on Github!"
     }
   ],
   "technologies": {
@@ -118,7 +118,7 @@
           "title": "Senior Web Developer",
           "dateStart": "2014-01-01",
           "where": "Liip AG, Switzerland",
-          "what": "Worked in various teams on various large-scale projects, from prototyping to fullstack implementation of complex features and DevOps. Occasional subsitute Agile Coach, Accessibility expert, UX designer"
+          "what": "Worked in various teams on various large-scale projects, from prototyping to fullstack implementation of complex features and DevOps. Occasional substitute Agile Coach, Accessibility expert, UX designer"
         },
         {
           "title": "Web Developer",
@@ -143,7 +143,7 @@
           "title": "Small freelancing projects",
           "dateStart": "2020-05-12",
           "where": "",
-          "what": "Websites for associations, small businessess, legacy refactoring, etc."
+          "what": "Websites for associations, small businesses, legacy refactoring, etc."
         }
       ]
     },
@@ -153,32 +153,37 @@
       "iconName": "diploma",
       "points": [
         {
-          "title": "BSc FHNW in CS with specialization in design and management",
+          "title": "BSc FHNW in computer science with specialization in design and management",
           "dateStart": "2020-05-12",
+          "dateEnd": null,
           "where": "FHNW, Brugg, Switzerland",
-          "what": "Swiss grade 5.3, ETCS Grade A"
+          "what": "Swiss grade 5.3, ECTS Grade A"
         },
         {
-          "title": "EZF as application developer and business matura",
+          "title": "EFZ as application developer and business matura",
           "dateStart": "2010-06-30",
+          "dateEnd": null,
           "where": "Kantonsschule Enge, Zurich, Switzerland",
           "what": "Swiss grade 5.3"
         },
         {
-          "title": "Machine Learning Course Certificate",
+          "title": "Machine Learning Certificate",
           "dateStart": "2018-04-28",
+          "dateEnd": null,
           "where": "Coursera, Stanford University",
           "what": "During BSc studies. Various ML techniques, maths and general knowledge about ML, Deep learning and ML pipelines"
         },
         {
           "title": "Zend Certified PHP Engineer ZCPE",
           "dateStart": "2014-09-10",
+          "dateEnd": null,
           "where": "Zend - The PHP Company",
-          "what": "Knowledge about PHP, its specialities and core concepts"
+          "what": "Knowledge about PHP, its specialties and core concepts"
         },
         {
           "title": "First aid provider level 2 IVR 2021",
           "dateStart": "2023-06-25",
+          "dateEnd": null,
           "where": "Samariter Schweiz",
           "what": "Able to give advanced first aid in emergency situations"
         }
@@ -192,21 +197,25 @@
         {
           "title": "dev.to Top 7 Author Of The Week",
           "dateStart": "2021-02-09",
+          "dateEnd": null,
           "what": "Twice in 2021, once in 2022"
         },
         {
           "title": "German Design Award - Winner Interactive User Experience",
           "dateStart": "2019-02-08",
+          "dateEnd": null,
           "what": "for ETH Immobilienökonomie"
         },
         {
           "title": "Best of Swiss Web - public affairs silver",
           "dateStart": "2018-04-12",
+          "dateEnd": null,
           "what": "for ETH Immobilienökonomie"
         },
         {
           "title": "Pass with distinction",
           "dateStart": "2010-06-30",
+          "dateEnd": null,
           "what": "Kantonsschule Enge, Zurich, Switzerland, Swiss grade 5.3"
         }
       ]
@@ -220,7 +229,7 @@
           "title": "First aid instructor for BLS-AED-SRC and Level 1 IVR courses",
           "dateStart": "2025-03-01",
           "where": "Samariter Region-Thalwil",
-          "what": "Giving courses for obtaining a driver's license, on reanimation, courses for companies, and customized courses"
+          "what": "Giving courses for obtaining a driver's license, on resuscitation techniques, courses for companies, and customized courses"
         },
         {
           "title": "First aid paramedic at events, fairs and sporting events",
