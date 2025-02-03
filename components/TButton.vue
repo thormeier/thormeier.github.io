@@ -1,40 +1,18 @@
 <template>
-  <button class="button py-2 px-3 text-xl font-script">
-    <slot></slot>
+  <button class="button" :class="{ 'border-2 border-black rounded-curved': hasBorder }">
+    <Highlight class="absolute top-[50%] left-[50%] w-auto h-auto max-h-full max-w-full z-0 -translate-[50%]" />
+    <div class="relative z-1">
+      <slot />
+    </div>
   </button>
 </template>
 
-<script>
-export default {
-  props: {
-    isActive: {
-      type: Boolean,
-      default: false
-    }
-  },
+<script lang="ts" setup>
+import Highlight from '@/assets/svg/highlight.svg?skipsvgo'
 
-  data() {
-    return {
-      toggledOnce: false
-    }
-  },
-
-  watch: {
-    isOpen() {
-      this.toggledOnce = true
-    }
-  }
-}
+withDefaults(defineProps<{
+  hasBorder?: boolean
+}>(), {
+  hasBorder: true,
+})
 </script>
-
-<style scoped>
-.button {
-  outline: none;
-  background-color: transparent;
-  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-  background-image: url('../assets/svg/highlight.svg?external');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-}
-</style>

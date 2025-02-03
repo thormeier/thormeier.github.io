@@ -1,205 +1,131 @@
 <template>
-  <div class="container mx-auto my-6">
+  <main class="container mx-auto my-6 px-5">
     <section class="overflow-hidden mb-8 pb-10">
-      <div>
-        <viewport-watcher @inViewport="animate('image')">
-          <tape-animator :is-active="animations.image.hasAnimated">
-            <t-image :src="imageMe" alt="A photo of me, Pascal Thormeier" />
-          </tape-animator>
-        </viewport-watcher>
-      </div>
+      <AnimatorViewport v-slot="{ visible }">
+        <AnimatorTape :is-active="visible">
+          <img src="~/assets/images/me.jpg" alt="A photo of me, Pascal Thormeier" class="image">
+        </AnimatorTape>
+      </AnimatorViewport>
 
       <div class="flex flex-wrap p-8 -mx-2">
         <div class="px-2 w-1/2 sm:w-1/3">
-          <sticky-note class="w-full text-xl sm:text-3xl">
-            Hey there,<br />I'm Pascal!
-          </sticky-note>
+          <StickyNote class="w-full text-xl sm:text-3xl mx-auto">
+            Hey there,<br>I'm Pascal!
+          </StickyNote>
         </div>
 
         <div class="px-2 w-1/2 sm:w-1/3">
-          <sticky-note class="w-full text-xl sm:text-3xl">
-            Get to know<br />me below!
-          </sticky-note>
+          <StickyNote class="w-full text-xl sm:text-3xl mx-auto">
+            Get to know<br>me below!
+          </StickyNote>
         </div>
 
         <div class="px-2 w-full sm:w-1/3 -mt-20">
-          <viewport-watcher @inViewport="animate('arrow')">
-            <arrow
-              :is-active="animations.arrow.hasAnimated"
-              class="arrow-down w-full"
-            />
-          </viewport-watcher>
+          <AnimatorViewport v-slot="{ visible }">
+            <AnimatorArrow class="rotate-90 w-full" :is-active="visible" />
+          </AnimatorViewport>
         </div>
       </div>
     </section>
 
     <section class="mb-6 px-4">
-      <viewport-watcher @inViewport="animate('aboutBox')">
-        <border-animator
-          :is-active="animations.aboutBox.hasAnimated"
-          class="mx-2 md:mx-6 lg:mx-8 my-3 p-6 pt-8 md:py-8"
-        >
-          <t-title>
+      <AnimatorViewport v-slot="{ visible }">
+        <AnimatorBorder :is-active="visible" class="p-10">
+          <h2 class="font-script text-3xl lg:text-4xl mb-3">
             About me
-          </t-title>
+          </h2>
 
-          <t-paragraph>
+          <p class="mb-3 text-xl">
             Hi, I'm Pascal Thormeier! I am a passionate web developer based in
             Switzerland who loves to work full-stack with all kinds of
             technologies.
-          </t-paragraph>
+          </p>
 
-          <t-paragraph>
-            I am a problem solver who understands how to systematically find the
-            best solution for all stakeholders. My passion lies in creating high
-            quality software that is actually useful.
-          </t-paragraph>
+          <p class="mb-3 text-xl">
+            I am a creative problem solver who understands how to systematically
+            find the best solution for all stakeholders. My passion lies in creating
+            high quality software that is actually useful.
+          </p>
 
-          <t-paragraph>
-            Thanks to my bachelor studies and around 10 years of experience I
+          <p class="mb-3 text-xl">
+            Thanks to my bachelor studies and around 15 years of experience I
             have a broad knowledge in different areas: Web development, desktop
             development, databases, DevOps, UX design and management. I love to
             share my knowledge and learn new things.
-          </t-paragraph>
+          </p>
 
-          <t-paragraph class="font-bold text-xl">
+          <p class="mb-3 text-xl">
+            I am a pragmatic person. Thinking outside the box and striving to
+            understand the big picture are my strengths and I use these to
+            build solutions that are simple, yet efficient.
+          </p>
+
+          <p class="text-xl font-bold">
             My motto: Choose the right tool for the job.
-          </t-paragraph>
-        </border-animator>
-      </viewport-watcher>
+          </p>
+        </AnimatorBorder>
+      </AnimatorViewport>
     </section>
 
     <section class="mb-6 px-4">
-      <viewport-watcher @inViewport="animate('ctaBox')">
-        <border-animator
-          :is-active="animations.ctaBox.hasAnimated"
-          class="mx-2 md:mx-6 lg:mx-8 my-3 p-6 pt-12 md:py-8"
-        >
-          <t-subtitle>
+      <AnimatorViewport v-slot="{ visible }">
+        <AnimatorBorder :is-active="visible" class="p-10">
+          <h2 class="font-script text-3xl lg:text-4xl mb-3">
             Get to know me better
-          </t-subtitle>
-
-          <t-paragraph>
-            If you want to get to know me even better, have a look at my resume,
-            my writing or my free time projects!
-          </t-paragraph>
+          </h2>
 
           <div class="flex flex-wrap justify-center mt-12 mb-20">
-            <div class="px-2 mb-6 w-full sm:w-1/3">
-              <viewport-watcher @inViewport="animate('btnResume')">
-                <sticky-note class="w-full mx-auto">
-                  <router-link to="/resume">
-                    <border-animator
-                      :is-active="animations.btnResume.hasAnimated"
-                      class="mx-6 my-3"
-                    >
-                      <t-button>
-                        See my resume
-                      </t-button>
-                    </border-animator>
-                  </router-link>
-                </sticky-note>
-              </viewport-watcher>
-            </div>
+            <NuxtLink to="/resume" class="w-full sm:w-1/3">
+              <StickyNote class="w-full mx-auto">
+                <TButton class="text-lg sm:text-2xl">
+                  See my resume
+                </TButton>
+              </StickyNote>
+            </NuxtLink>
 
-            <div class="px-2 mb-6 w-full sm:w-1/3">
-              <viewport-watcher @inViewport="animate('btnWriting')">
-                <sticky-note class="w-full mx-auto">
-                  <router-link to="/articles">
-                    <border-animator
-                      :is-active="animations.btnWriting.hasAnimated"
-                      class="mx-8 my-3"
-                    >
-                      <t-button>
-                        Read my articles
-                      </t-button>
-                    </border-animator>
-                  </router-link>
-                </sticky-note>
-              </viewport-watcher>
-            </div>
+            <NuxtLink to="/articles" class="w-full sm:w-1/3">
+              <StickyNote class="w-full mx-auto">
+                <TButton class="text-lg sm:text-2xl">
+                  Read my articles
+                </TButton>
+              </StickyNote>
+            </NuxtLink>
 
-            <div class="px-2 mb-6 w-full sm:w-1/3">
-              <viewport-watcher @inViewport="animate('btnProjects')">
-                <sticky-note class="w-full mx-auto">
-                  <router-link to="/contact">
-                    <border-animator
-                      :is-active="animations.btnProjects.hasAnimated"
-                      class="mx-8 my-3"
-                    >
-                      <t-button>
-                        Contact me
-                      </t-button>
-                    </border-animator>
-                  </router-link>
-                </sticky-note>
-              </viewport-watcher>
-            </div>
+            <NuxtLink to="/contact" class="w-full sm:w-1/3">
+              <StickyNote class="w-full mx-auto">
+                <TButton class="text-lg sm:text-2xl">
+                  Contact me
+                </TButton>
+              </StickyNote>
+            </NuxtLink>
           </div>
-        </border-animator>
-      </viewport-watcher>
+        </AnimatorBorder>
+      </AnimatorViewport>
+
+      <div class="flex flex-wrap justify-center mt-12 mb-20" />
     </section>
-  </div>
+  </main>
 </template>
 
-<script>
-import Animation from '@/mixins/Animation'
+<script lang="ts" setup>
+import AnimatorTape from '~/components/Animator/Tape.vue'
 
-export default {
-  head: {
-    title: 'Get to know Pascal Thormeier',
-    meta: [
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'Pascal Thormeier presents himself.'
-      }
-    ]
-  },
+useHead({
+  title: 'Get to know Pascal Thormeier',
+  meta: [
+    { name: 'description', content: 'Pascal Thormeier presents himself.' },
+  ],
+})
 
-  mixins: [Animation],
+const image = ref<HTMLElement>()
+const imageTapeAnimated = ref(false)
 
-  data() {
-    return {
-      imageMe: require('~/assets/images/me.jpg'),
+const targetIsVisible = useElementVisibility(image)
+watch(() => targetIsVisible, () => {
+  imageTapeAnimated.value = true
+})
 
-      animations: {
-        aboutBox: {
-          delay: 1000,
-          hasAnimated: false
-        },
-        ctaBox: {
-          delay: 1000,
-          hasAnimated: false
-        },
-        image: {
-          delay: 0,
-          hasAnimated: false
-        },
-        arrow: {
-          delay: 300,
-          hasAnimated: false
-        },
-        btnResume: {
-          delay: 400,
-          hasAnimated: false
-        },
-        btnWriting: {
-          delay: 700,
-          hasAnimated: false
-        },
-        btnProjects: {
-          delay: 1000,
-          hasAnimated: false
-        }
-      }
-    }
-  }
+if (targetIsVisible.value) {
+  imageTapeAnimated.value = true
 }
 </script>
-
-<style scoped>
-.arrow-down {
-  transform: rotate(90deg);
-}
-</style>

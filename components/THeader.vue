@@ -1,80 +1,74 @@
 <template>
   <header
-    class="p-3 border-b-2 bg-white flex flex-wrap items-center justify-between z-20 sticky top-0"
+    class="print:hidden p-3 gap-6 border-b-2 bg-white flex flex-wrap items-center justify-between z-20 sticky top-0"
   >
-    <span class="font-script text-3xl">
-      <router-link to="/">
+    <h1 class="font-script text-3xl">
+      <NuxtLink to="/">
         thormeier.dev
-      </router-link>
-    </span>
+      </NuxtLink>
+    </h1>
 
-    <span class="block md:hidden">
-      <chevron
-        @click="open = !open"
-        :class="{ 'rotate-180': open }"
-        class="w-icon h-icon transition-transform duration-200 transform outline-none cursor-pointer"
-      />
+    <span class="flex md:hidden">
+      <button
+        class="transition-all duration-200 ease-in-out"
+        :class="{ '!rotate-180': open }"
+        @click.prevent="open = !open"
+      >
+        <SvgoChevron
+          class="!w-icon !h-icon outline-none cursor-pointer"
+        />
+      </button>
     </span>
 
     <nav
       :class="{ hidden: !open }"
       class="flex flex-wrap justify-around mt-6 md:mt-0 w-full md:w-auto md:flex gap-6"
     >
-      <router-link to="/articles">
-        <t-button class="curved-border">
+      <NuxtLink to="/articles">
+        <TButton>
           Articles
-        </t-button>
-      </router-link>
+        </TButton>
+      </NuxtLink>
 
-      <router-link to="/resume">
-        <t-button class="curved-border">
+      <NuxtLink to="/resume">
+        <TButton>
           Resume
-        </t-button>
-      </router-link>
+        </TButton>
+      </NuxtLink>
 
-      <router-link to="/contact">
-        <t-button class="curved-border">
+      <NuxtLink to="/contact">
+        <TButton>
           Contact
-        </t-button>
-      </router-link>
+        </TButton>
+      </NuxtLink>
 
-      <router-link to="/mastering-css-grid">
-        <t-button class="curved-border">
+      <NuxtLink to="/mastering-css-grid">
+        <TButton>
           My book
-        </t-button>
-      </router-link>
+        </TButton>
+      </NuxtLink>
 
       <a href="https://linktr.ee/thormeier" target="_blank">
-        <t-button class="curved-border">
+        <TButton>
           Linktree
-        </t-button>
+        </TButton>
       </a>
 
       <a href="https://www.buymeacoffee.com/pthormeier" target="_blank">
-        <t-button class="curved-border">
+        <TButton>
           Buy me a coffee
-        </t-button>
+        </TButton>
       </a>
 
       <a href="https://paypal.me/pthormeier" target="_blank">
-        <t-button class="curved-border">
+        <TButton>
           Support me via PayPal
-        </t-button>
+        </TButton>
       </a>
     </nav>
   </header>
 </template>
 
-<script>
-import Chevron from '../assets/svg/chevron.svg?inline'
-
-export default {
-  components: { Chevron },
-
-  data() {
-    return {
-      open: false
-    }
-  }
-}
+<script lang="ts" setup>
+const open = ref(false)
 </script>

@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 250" width="260" height="250">
-  <path
-    d="M 0 0 Q 0 180, 10 250 10 250, 260 250 Q 250 180, 250 0 250 0, 0 0"
-    stroke-linejoin="round"
-    stroke-linecap="square"
-    opacity="1"
-    stroke-width="1"
-  />
-</svg>

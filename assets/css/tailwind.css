@@ -1,8 +1,535 @@
-/* font definitions */
-@import './fonts.css';
+@import 'tailwindcss';
 
-/* purgecss start ignore */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-/* purgecss end ignore */
-@import 'tailwindcss/utilities';
+@theme {
+  --color-primary-normal: #c1710f;
+  --color-primary-light: #ff9812;
+  --color-primary-lighter: #ffaf57;
+  --color-secondary: #bbebff;
+  --color-black: #242424;
+  --color-white: #f7f9fa;
+  --color-grey: #7f7f7f;
+  --color-light-grey: #e0e0e0;
+
+  --font-script: 'Kalam', sans-serif;
+  --font-sans: 'Open Sans', sans-serif;
+  --text-2xs: 10px;
+  --text-2xs--line-height: 1.1;
+
+  --max-width-contact: 200px;
+  --max-height-contact: 200px;
+
+  --width-icon: 30px;
+  --height-icon: 30px;
+
+  --stroke-width-3: 3;
+
+  --radius-curved: 255px 15px 225px 15px/15px 225px 15px 255px;
+
+  --shadow-note: -2px 2px 15px 0 rgba(36, 36, 36, 36, 0.25);
+  --shadow-image: -7px 4px 24px 0 rgba(138, 138, 138, 1);
+  --shadow-image-small: -7px 4px 12px 0 rgba(138, 138, 138, 1);
+}
+
+* {
+  -webkit-print-color-adjust: exact !important; /* Chrome, Safari 6 – 15.3, Edge */
+  color-adjust: exact !important; /* Firefox 48 – 96 */
+  print-color-adjust: exact !important; /* Firefox 97+, Safari 15.4+ */
+}
+
+@layer components {
+  body {
+    background-size: 20px 20px;
+    background-image: linear-gradient(to right, var(--color-light-grey) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--color-light-grey) 1px, transparent 1px);
+  }
+
+  .curved-border {
+    @apply rounded-curved relative border-2 bg-transparent border-black;
+  }
+
+  .image {
+    @apply border-[15px] print:border-[8px] border-white shadow-image-small lg:shadow-image;
+  }
+
+  .button {
+    @apply relative cursor-pointer outline-0 bg-transparent text-xl font-script transition-all ease-in-out duration-250 px-3 py-2;
+  }
+
+  .button:focus,
+  .button:hover {
+    @apply border-primary-normal;
+  }
+
+  .tape-animator-container {
+    @apply overflow-hidden relative;
+  }
+
+  .tape {
+    @apply w-[90px] h-[45px] bg-[url(~/assets/svg/tape.svg)] bg-no-repeat bg-center bg-contain absolute z-10;
+  }
+
+  .tape-topleft {
+    transform: rotate(45deg) scale(1.5);
+    transition: all 0.3s;
+    opacity: 0;
+    top: 16px;
+    left: 0;
+  }
+
+  .tape-topright {
+    transform: rotate(-45deg) scale(1.5);
+    transition: all 0.3s;
+    opacity: 0;
+    right: 0;
+    top: 22px;
+  }
+
+  .tape-bottomleft {
+    transform: rotate(-45deg) scale(1.5);
+    transition: all 0.3s;
+    opacity: 0;
+    bottom: 16px;
+    left: 6px;
+  }
+
+  .tape-bottomright {
+    transform: rotate(45deg) scale(1.5);
+    transition: all 0.3s;
+    opacity: 0;
+    right: 6px;
+    bottom: 16px;
+  }
+
+  .tape.small-nomargin {
+    @apply w-[40px] h-[20px];
+  }
+
+  .tape-topleft.small-nomargin {
+    top: -15px;
+    left: -25px;
+  }
+
+  .tape-topright.small-nomargin {
+    top: -15px;
+    right: -25px;
+  }
+
+  .tape-bottomleft.small-nomargin {
+    bottom: -15px;
+    left: -25px;
+  }
+
+  .tape-bottomright.small-nomargin {
+    bottom: -15px;
+    right: -25px;
+  }
+
+  .tape-topleft.animated {
+    transform: rotate(45deg) scale(1);
+    opacity: 1;
+  }
+  .tape-topright.animated {
+    transform: rotate(-45deg) scale(1);
+    opacity: 1;
+  }
+  .tape-bottomleft.animated {
+    transform: rotate(-45deg) scale(1);
+    opacity: 1;
+  }
+  .tape-bottomright.animated {
+    transform: rotate(45deg) scale(1);
+    opacity: 1;
+  }
+
+  .tape-content {
+    transition: all 0.2s;
+    transform: scale(1.1);
+    opacity: 0;
+    padding: calc(var(--spacing) * 8);
+  }
+
+  .tape-content.animated {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .curved-border.no-animation {
+    animation: none;
+  }
+
+  .curved-border.is-active {
+    animation: drawBorder 1s;
+    animation-fill-mode: forwards;
+  }
+
+  .curved-border.is-inactive {
+    clip-path: polygon(
+      /* Inner */ min(8%, 13px) min(8%, 13px),
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      min(8%, 13px) calc(100% - min(8%, 13px)),
+      min(8%, 13px) min(8%, 13px),
+      /* First line */ 0 0,
+      0 0,
+      0 0,
+      /* Second line */ 0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      /* Third line */ 0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      /* Fourth line */ 0 0,
+      0 0,
+      0 0,
+      0 0
+    );
+  }
+
+  @keyframes drawBorder {
+    0% {
+      clip-path: polygon(
+        /* Inner */ min(8%, 13px) min(8%, 13px),
+        calc(100% - min(8%, 13px)) min(8%, 13px),
+        calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+        min(8%, 13px) calc(100% - min(8%, 13px)),
+        min(8%, 13px) min(8%, 13px),
+        /* First line */ 0 0,
+        0 0,
+        0 0,
+        /* Second line */ 0 0,
+        0 0,
+        0 0,
+        0 0,
+        0 0,
+        /* Third line */ 0 0,
+        0 0,
+        0 0,
+        0 0,
+        0 0,
+        /* Fourth line */ 0 0,
+        0 0,
+        0 0,
+        0 0
+      );
+    }
+
+    0.1% {
+      clip-path: polygon(
+        /* Inner */ min(8%, 13px) min(8%, 13px),
+        calc(100% - min(8%, 13px)) min(8%, 13px),
+        calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+        min(8%, 13px) calc(100% - min(8%, 13px)),
+        min(8%, 13px) min(8%, 13px),
+        /* First line */ 0 0,
+        0 0,
+        0 min(8%, 13px),
+        /* Second line */ min(8%, 13px) min(8%, 13px),
+        0 0,
+        0 0,
+        0 0,
+        calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+        /* Third line */ calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+        100% 100%,
+        100% 100%,
+        calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+        min(8%, 13px) calc(100% - min(8%, 13px)),
+        /* Fourth line */ min(8%, 13px) calc(100% - min(8%, 13px)),
+        0 100%,
+        0 100%,
+        min(8%, 13px) calc(100% - min(8%, 13px))
+      );
+    }
+
+    23.9% {
+      clip-path: polygon(
+        /* Inner */ min(8%, 13px) min(8%, 13px),
+        calc(100% - min(8%, 13px)) min(8%, 13px),
+        calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+        min(8%, 13px) calc(100% - min(8%, 13px)),
+        min(8%, 13px) min(8%, 13px),
+        /* First line */ 0 0,
+        100% 0,
+        calc(100% - min(8%, 13px)) min(8%, 13px),
+        /* Second line */ calc(100% - min(8%, 13px)) 0,
+        100% 0,
+        100% 0,
+        calc(100% - min(8%, 13px)) min(8%, 13px),
+        calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+        /* Third line */ calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+        100% 100%,
+        100% 100%,
+        calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+        min(8%, 13px) calc(100% - min(8%, 13px)),
+        /* Fourth line */ min(8%, 13px) calc(100% - min(8%, 13px)),
+        0 100%,
+        0 100%,
+        min(8%, 13px) calc(100% - min(8%, 13px))
+      );
+    }
+
+    50% {
+      clip-path: polygon(
+        /* Inner */ min(8%, 13px) min(8%, 13px),
+        calc(100% - min(8%, 13px)) min(8%, 13px),
+        calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+        min(8%, 13px) calc(100% - min(8%, 13px)),
+        min(8%, 13px) min(8%, 13px),
+        /* First line */ 0 0,
+        100% 0,
+        calc(100% - min(8%, 13px)) min(8%, 13px),
+        /* Second line */ calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+        100% 100%,
+        100% 0,
+        calc(100% - min(8%, 13px)) min(8%, 13px),
+        calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+        /* Third line */ calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+        100% 100%,
+        100% 100%,
+        calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+        min(8%, 13px) calc(100% - min(8%, 13px)),
+        /* Fourth line */ min(8%, 13px) calc(100% - min(8%, 13px)),
+        0 100%,
+        0 100%,
+        min(8%, 13px) calc(100% - min(8%, 13px))
+      );
+    }
+
+    73.9% {
+      clip-path: polygon(
+        /* Inner */ min(8%, 13px) min(8%, 13px),
+        calc(100% - min(8%, 13px)) min(8%, 13px),
+        calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+        min(8%, 13px) calc(100% - min(8%, 13px)),
+        min(8%, 13px) min(8%, 13px),
+        /* First line */ 0 0,
+        100% 0,
+        calc(100% - min(8%, 13px)) min(8%, 13px),
+        /* Second line */ calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+        100% 100%,
+        100% 0,
+        calc(100% - min(8%, 13px)) min(8%, 13px),
+        calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+        /* Third line */ min(8%, 13px) calc(100% - min(8%, 13px)),
+        0 100%,
+        100% 100%,
+        calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+        min(8%, 13px) calc(100% - min(8%, 13px)),
+        /* Fourth line */ min(8%, 13px) calc(100% - min(8%, 13px)),
+        0 100%,
+        0 100%,
+        min(8%, 13px) calc(100% - min(8%, 13px))
+      );
+    }
+
+    100% {
+      clip-path: polygon(
+        /* Inner */ min(8%, 13px) min(8%, 13px),
+        calc(100% - min(8%, 13px)) min(8%, 13px),
+        calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+        min(8%, 13px) calc(100% - min(8%, 13px)),
+        min(8%, 13px) min(8%, 13px),
+        /* First line */ 0 0,
+        100% 0,
+        calc(100% - min(8%, 13px)) min(8%, 13px),
+        /* Second line */ calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+        100% 100%,
+        100% 0,
+        calc(100% - min(8%, 13px)) min(8%, 13px),
+        calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+        /* Third line */ min(8%, 13px) calc(100% - min(8%, 13px)),
+        0 100%,
+        100% 100%,
+        calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+        min(8%, 13px) calc(100% - min(8%, 13px)),
+        /* Fourth line */ min(8%, 13px) min(8%, 13px),
+        0 0,
+        0 100%,
+        min(8%, 13px) calc(100% - min(8%, 13px))
+      );
+    }
+  }
+
+  .arrow path:nth-child(1) {
+    stroke-dasharray: 161;
+  }
+
+  .arrow path:nth-child(2) {
+    stroke-dasharray: 65;
+  }
+
+  .arrow path:nth-child(3) {
+    stroke-dasharray: 61;
+  }
+
+  .arrow path:nth-child(4) {
+    stroke-dasharray: 61;
+  }
+
+  .arrow.undrawn path:nth-child(1) {
+    stroke-dashoffset: 161;
+  }
+
+  .arrow.undrawn path:nth-child(2) {
+    stroke-dashoffset: 65;
+  }
+
+  .arrow.undrawn path:nth-child(3) {
+    stroke-dashoffset: 61;
+  }
+
+  .arrow.undrawn path:nth-child(4) {
+    stroke-dashoffset: 61;
+  }
+
+  .arrow.animated path:nth-child(1) {
+    animation: arrow1 1s;
+    animation-fill-mode: forwards;
+  }
+
+  .arrow.animated path:nth-child(2) {
+    animation: arrow2 1s;
+    animation-fill-mode: forwards;
+  }
+
+  .arrow.animated path:nth-child(3) {
+    animation: arrow3 1s;
+    animation-fill-mode: forwards;
+  }
+
+  .arrow.animated path:nth-child(4) {
+    animation: arrow4 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes arrow1 {
+    0% {
+      stroke-dasharray: 161;
+      stroke-dashoffset: 161;
+    }
+    46% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes arrow2 {
+    0% {
+      stroke-dasharray: 65;
+      stroke-dashoffset: 65;
+    }
+    46% {
+      stroke-dasharray: 65;
+      stroke-dashoffset: 65;
+    }
+    64% {
+      stroke-dasharray: 65;
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dasharray: 65;
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes arrow3 {
+    0% {
+      stroke-dasharray: 61;
+      stroke-dashoffset: 61;
+    }
+    64% {
+      stroke-dashoffset: 61;
+    }
+    82% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes arrow4 {
+    0% {
+      stroke-dasharray: 61;
+      stroke-dashoffset: 61;
+    }
+    82% {
+      stroke-dasharray: 61;
+      stroke-dashoffset: 61;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .sticky-container {
+    @apply max-w-[270px] relative;
+  }
+
+  .sticky-outer {
+    @apply flex aspect-[0.92] relative w-full;
+  }
+
+  .sticky-note {
+    @apply absolute inset-0;
+  }
+
+  .sticky-note:before {
+    @apply shadow-note bg-black/25 content-[''] h-[79%] w-[94%] absolute top-[20%];
+  }
+
+  .sticky-content {
+    background: linear-gradient(
+      180deg,
+      rgba(187, 235, 255, 1) 0%,
+      rgba(187, 235, 255, 1) 12%,
+      rgba(170, 220, 241, 1) 75%,
+      rgba(195, 229, 244, 1) 100%
+    );
+
+    @apply flex justify-center items-center w-full h-full;
+
+    clip-path: url(#stickyClip);
+  }
+
+  .grid-resume {
+    @apply grid gap-5 print:gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3;
+  }
+
+  #resume-box-photo {
+    @apply col-start-1 row-start-1;
+  }
+
+  #resume-box-info {
+    @apply lg:col-start-2 lg:row-start-1 print:col-start-2 print:row-start-1;
+  }
+
+  #resume-box-tech {
+    @apply lg:col-start-3 lg:row-start-1 lg:row-span-2 print:col-start-3 print:row-start-1 print:row-span-2;
+  }
+
+  #resume-box-work {
+    @apply lg:col-start-1 lg:col-span-2 lg:row-start-2 print:col-start-1 print:col-span-2 print:row-start-2;
+  }
+
+  #resume-box-projects {
+    @apply lg:col-start-1 lg:col-span-3 md:row-start-3 print:col-start-1 print:col-span-3 print:row-start-3;
+  }
+
+  #resume-box-awards {
+    @apply print:mt-5 lg:col-start-1 lg:row-start-4 print:col-start-1 print:row-start-4;
+  }
+
+  #resume-box-diplomas {
+    @apply print:mt-5 lg:col-start-2 lg:col-span-2 lg:row-start-4 print:col-start-2 print:col-span-2 print:row-start-4;
+  }
+
+  #resume-box-leadershipAndVolunteering {
+    @apply lg:col-start-1 lg:col-span-3 lg:row-start-5 print:col-start-1 print:col-span-3 print:row-start-5;
+  }
+}

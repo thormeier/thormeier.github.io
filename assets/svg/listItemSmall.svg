@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" width="15" height="7.5">
+  <path
+    d="M 20 50 Q 85 40, 180 50"
+    stroke="#000"
+    stroke-width="10"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+    class="p1"
+  />
+  <path
+    d="M 180 50 Q 150 20, 130 10"
+    stroke="#000"
+    stroke-width="10"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+    class="p2"
+  />
+  <path
+    d="M 130 10 Q 140 20, 175 50"
+    stroke="#000"
+    stroke-width="10"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+    class="p3"
+  />
+  <path
+    d="M 175 50 Q 150 80 130 90"
+    stroke="#000"
+    stroke-width="10"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+    class="p4"
+  />
+</svg>

@@ -1,0 +1,240 @@
+{
+  "projects": [
+    {
+      "title": "bs.ch - Website for the Canton of Basel-Stadt",
+      "techStack": "Drupal, Nuxt, Vue, GraphQL, TypeScript, Vite, MJML",
+      "role": "Fullstack Developer, Frontend Developer, Software Architect",
+      "what": "Development of a digital desgin system as installable library, integration of MJML into Nuxt"
+    },
+    {
+      "title": "SV Group - Relaunch",
+      "techStack": "Drupal, Nuxt, Vue, GraphQL, TypeScript, Vite",
+      "role": "Frontend Developer",
+      "what": "Beautiful interaction design and high focus on accessibility and usability"
+    },
+    {
+      "title": "ETH Immobilienökonomie",
+      "techStack": "Vue, Express, MongoDB, SOAP, REST",
+      "role": "Fullstack Developer, Software Architect, Interaction Designer",
+      "what": "E-learning app for students of architecture, simplifying complex calculationsand making them visible"
+    },
+    {
+      "title": "Migros Product Catalogue & Migipedia",
+      "techStack": "Symfony, Bootstrap, Twig, JavaScript",
+      "role": "Fullstack Developer, DevOps",
+      "what": "Simplying the way one of the largest retailers shows their products, extra focus on performance and compatibility"
+    },
+    {
+      "title": "Various open source and freelancing projects",
+      "techStack": "PHP, JavaScript, TypeScript, Python, Java, Drupal, Symfony",
+      "what": "A wide variety of libraries, tools, bundles, packages, etc. used by many projects and hundreds of devs"
+    }
+  ],
+  "technologies": {
+    "frontend": [
+      {
+        "name": "JavaScript and TypeScript",
+        "rating": 5
+      },
+      {
+        "name": "Nuxt, Vue",
+        "rating": 5
+      },
+      {
+        "name": "React",
+        "rating": 4
+      },
+      {
+        "name": "Build tools (Vite, Webpack, esbuild)",
+        "rating": 5
+      },
+      {
+        "name": "CSS with various frameworks",
+        "rating": 5
+      }
+    ],
+    "backend": [
+      {
+        "name": "PHP",
+        "rating": 5
+      },
+      {
+        "name": "Symfony",
+        "rating": 5
+      },
+      {
+        "name": "Laravel",
+        "rating": 4
+      },
+      {
+        "name": "Drupal",
+        "rating": 4
+      },
+      {
+        "name": "Python",
+        "rating": 3
+      }
+    ],
+    "data": [
+      {
+        "name": "MySQL/MariaDB",
+        "rating": 5
+      },
+      {
+        "name": "Postgres",
+        "rating": 3
+      },
+      {
+        "name": "MongoDB & similar",
+        "rating": 4
+      },
+      {
+        "name": "APIs: GraphQL, REST",
+        "rating": 5
+      }
+    ],
+    "ops": [
+      {
+        "name": "Linux/*nix administration",
+        "rating": 5
+      },
+      {
+        "name": "Docker, Docker Compose, Lando, DDEV",
+        "rating": 5
+      },
+      {
+        "name": "Bash/ZSH",
+        "rating": 5
+      }
+    ]
+  },
+  "boxes": [
+    {
+      "id": "work",
+      "label": "Work experience",
+      "iconName": "laptop",
+      "points": [
+        {
+          "title": "Senior Web Developer",
+          "dateStart": "2014-01-01",
+          "where": "Liip AG, Switzerland",
+          "what": "Worked in various teams on various large-scale projects, from prototyping to fullstack implementation of complex features and DevOps. Occasional subsitute Agile Coach, Accessibility expert, UX designer"
+        },
+        {
+          "title": "Web Developer",
+          "dateStart": "2010-07-01",
+          "dateEnd": "2013-12-31",
+          "where": "Cinergy AG, Switzerland",
+          "what": "Development, bugfixing, system administration, 2nd level support, deployment, network administration"
+        },
+        {
+          "title": "Book author",
+          "dateStart": "2023-06-09",
+          "where": "Packt, Birmingham",
+          "what": "Wrote Mastering CSS Grid: A Comprehensive and Practical Guide to Creating Beautiful Layouts with CSS Grid. A 330 page book to learn all about CSS Grid."
+        },
+        {
+          "title": "Course author",
+          "dateStart": "2022-02-18",
+          "where": "Educative.io",
+          "what": "Wrote the course titled \"Advanced VueJS: Build Better Applications Efficiently\", containing 51 lessons, 57 code playgrounds and 8 quizzes."
+        },
+        {
+          "title": "Small freelancing projects",
+          "dateStart": "2020-05-12",
+          "where": "",
+          "what": "Websites for associations, small businessess, legacy refactoring, etc."
+        }
+      ]
+    },
+    {
+      "id": "diplomas",
+      "label": "Diplomas & certificates",
+      "iconName": "diploma",
+      "points": [
+        {
+          "title": "BSc FHNW in CS with specialization in design and management",
+          "dateStart": "2020-05-12",
+          "where": "FHNW, Brugg, Switzerland",
+          "what": "Swiss grade 5.3, ETCS Grade A"
+        },
+        {
+          "title": "EZF as application developer and business matura",
+          "dateStart": "2010-06-30",
+          "where": "Kantonsschule Enge, Zurich, Switzerland",
+          "what": "Swiss grade 5.3"
+        },
+        {
+          "title": "Machine Learning Course Certificate",
+          "dateStart": "2018-04-28",
+          "where": "Coursera, Stanford University",
+          "what": "During BSc studies. Various ML techniques, maths and general knowledge about ML, Deep learning and ML pipelines"
+        },
+        {
+          "title": "Zend Certified PHP Engineer ZCPE",
+          "dateStart": "2014-09-10",
+          "where": "Zend - The PHP Company",
+          "what": "Knowledge about PHP, its specialities and core concepts"
+        },
+        {
+          "title": "First aid provider level 2 IVR 2021",
+          "dateStart": "2023-06-25",
+          "where": "Samariter Schweiz",
+          "what": "Able to give advanced first aid in emergency situations"
+        }
+      ]
+    },
+    {
+      "id": "awards",
+      "label": "Awards",
+      "iconName": "award",
+      "points": [
+        {
+          "title": "dev.to Top 7 Author Of The Week",
+          "dateStart": "2021-02-09",
+          "what": "Twice in 2021, once in 2022"
+        },
+        {
+          "title": "German Design Award - Winner Interactive User Experience",
+          "dateStart": "2019-02-08",
+          "what": "for ETH Immobilienökonomie"
+        },
+        {
+          "title": "Best of Swiss Web - public affairs silver",
+          "dateStart": "2018-04-12",
+          "what": "for ETH Immobilienökonomie"
+        },
+        {
+          "title": "Pass with distinction",
+          "dateStart": "2010-06-30",
+          "what": "Kantonsschule Enge, Zurich, Switzerland, Swiss grade 5.3"
+        }
+      ]
+    },
+    {
+      "id": "leadershipAndVolunteering",
+      "label": "Leadership & Volunteering",
+      "iconName": "heart",
+      "points": [
+        {
+          "title": "First aid instructor for BLS-AED-SRC and Level 1 IVR courses",
+          "dateStart": "2025-03-01",
+          "where": "Samariter Region-Thalwil",
+          "what": "Giving courses for obtaining a driver's license, on reanimation, courses for companies, and customized courses"
+        },
+        {
+          "title": "First aid paramedic at events, fairs and sporting events",
+          "dateStart": "2020-01-01",
+          "where": "Samariter Region-Thalwil",
+          "what": "Providing first aid to people present at the events, sometimes leading shifts"
+        },
+        {
+          "title": "Company commander of Civil Protection",
+          "dateStart": "2019-07-22",
+          "where": "Zivilschutzorganisation Hardwald",
+          "what": "Responsible for the preparation of two-week repetition courses for all departments, head of operations in emergency situations, general leadership and voluntary work"
+        }
+      ]
+    }
+  ]
+}
