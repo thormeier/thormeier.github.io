@@ -63,7 +63,7 @@ function getIcon(id: string) {
 const profiles = ref([
   {
     title: 'Bluesky',
-    to: 'https://bsky.app/profile/thormeier.bsky.social',
+    to: 'https://bsky.app/profile/thormeier.dev',
     icon: 'bluesky',
   },
   {
