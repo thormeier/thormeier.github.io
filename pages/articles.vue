@@ -1,18 +1,17 @@
 <template>
   <main class="container mx-auto my-6 px-5">
     <h2 class="font-script text-3xl lg:text-4xl mb-3">
-      My articles
+      {{ $t('articles.title') }}
     </h2>
 
     <p class="mb-12 text-xl md:text-2xl">
-      Here's a list of all the articles I've written across various platforms
-      and blogs. Have a read!
+      {{ $t('articles.lead') }}
     </p>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
       <div>
         <h3 class="font-script text-3xl md:text-4xl mt-3 mb-3 mx-3">
-          Articles on dev.to
+          {{ $t('articles.onDevTo') }}
         </h3>
         <ul class="flex flex-col gap-10">
           <li v-for="(article, i) in devToPosts" :key="`devto_${i}`">
@@ -23,7 +22,7 @@
 
       <div>
         <h3 class="font-script text-3xl md:text-4xl mt-3 mb-3 mx-3">
-          Articles on other platforms
+          {{ $t('articles.onOtherPlatforms') }}
         </h3>
         <ul class="flex flex-col gap-10">
           <li v-for="(article, i) in otherPosts" :key="`devto_${i}`">
@@ -39,10 +38,15 @@
 import type { Article } from '../components/TArticle.vue'
 import otherPosts from '../data/articles.json'
 
+const { t } = useI18n()
+
 useHead({
-  title: 'Articles by Pascal Thormeier',
+  title: t('articles.seo.title'),
   meta: [
-    { name: 'description', content: 'All articles written on various platforms by Pascal Thormeier.' },
+    {
+      name: 'keywords',
+      content: t('articles.seo.keywords'),
+    },
   ],
 })
 

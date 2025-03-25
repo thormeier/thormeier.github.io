@@ -7,13 +7,19 @@ export default defineNuxtConfig({
     '~/assets/css/fonts.css',
     '~/assets/css/tailwind.css',
   ],
-  modules: [
-    'nuxt-svgo',
-    '@vueuse/nuxt',
-  ],
+  modules: ['nuxt-svgo', '@vueuse/nuxt', '@nuxtjs/i18n'],
   svgo: {
     autoImportPath: './assets/svg/',
     customComponent: 'SvgIcon',
+  },
+  i18n: {
+    locales: [
+      { code: 'en', language: 'en', file: 'en.json' },
+      { code: 'de', language: 'de', file: 'de.json' },
+    ],
+    langDir: 'locales',
+    strategy: 'prefix_except_default',
+    defaultLocale: 'en',
   },
   vite: {
     plugins: [

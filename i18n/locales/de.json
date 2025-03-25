@@ -1,0 +1,341 @@
+{
+  "nav": {
+    "articles": "Artikel",
+    "resume": "Lebenslauf",
+    "contact": "Kontakt",
+    "book": "Mein Buch",
+    "paypal": "Unterstütze mich auf Paypal",
+    "footer": "Gebaut mit Nuxt und Tailwind, alle Icons sind selbstgemacht."
+  },
+  "home": {
+    "seo": {
+      "title": "Startseite - Pascal Thormeier",
+      "keywords": "Webentwicklung, Programmierung, Pascal Thormeier, Portfolio, Full-Stack, Schweiz"
+    },
+    "heyThere": "Hallo,",
+    "imPascal": "ich bin Pascal!",
+    "getToKnow": "Lerne mich weiter",
+    "meBelow": "unten kennen!",
+    "aboutMe": {
+      "title": "Über mich",
+      "p1": "Hi, ich bin Pascal Thormeier! Ich bin ein passionierter Web-Entwickler aus der Schweiz der es liebt Full-Stack mit allen möglichen Technologien zu arbeiten.",
+      "p2": "Ich bin ein kreativer Problemlöser, der es versteht systematisch die beste Lösung für alle Stakeholder zu finden. Meine Leidenschaft liegt darin, hochqualitative Software zu erschaffen, die auchg wirklich nützlich ist.",
+      "p3": "Dank meinem Bachelorstudium und rund 15 Jahren Erfahrung habe ich ein breites Wissen in verschiedensten Bereichen: Web development, Desktop development, Datenbanken, DevOps, UX und Management. Ich liebe es, mein Wissen weiterzugeben und neue Dinge zu lernen.",
+      "p4": "Ich bin ein pragmatischer Mensch. Der Blick über den Tellerrand und das Bestreben, das grosse Ganze zu verstehen sind meine Stärken. Diese Stärken nutze ich, um Lösungen zu entwickeln, die einfach, aber effizient sind.",
+      "motto": "Mein Motto: Wähle das richtige Werkzeug für die Aufgabe."
+    },
+    "getToKnowMeBetter": {
+      "title": "Lerne mich noch besser kennen",
+      "resume": "Mein Lebenslauf",
+      "articles": "Meine Artikel",
+      "contact": "Kontaktiere mich"
+    }
+  },
+  "resume": {
+    "seo": {
+      "title": "Lebenslauf - Pascal Thormeier",
+      "keywords": "Lebenslauf, Portfolio, Webentwicklung, Full-Stack, Fähigkeiten, Erfahrung, Pascal Thormeier"
+    },
+    "pronouns": "er/ihm",
+    "birthDate": "Geboren 1990-01-15",
+    "location": "Lebe in Zürich, CH",
+    "bulletPoints": [
+      "Neugieriger selbstorganisierter Macher",
+      "Team-Player, Leader, Coach",
+      "Leidenschaft fürs Internet",
+      "Genereller Tech-Enthusiast",
+      "Deutsch (Muttersprache)",
+      "Englisch (verhandlungssicher)"
+    ],
+    "content": {
+      "projects": {
+        "bs": {
+          "title": "bs.ch - Webseite für den Kanton Basel-Stadt",
+          "techStack": "Drupal, Nuxt, Vue, GraphQL, TypeScript, Vite, MJML",
+          "role": "Fullstack Developer, Frontend Developer, Software Architekt",
+          "what": "Entwicklung eines digitalen Designsystems als installierbare Library, Integration von MJML in Nuxt, Frontend- und Backend-Entwicklung"
+        },
+        "sv": {
+          "title": "SV Group - Relaunch",
+          "techStack": "Drupal, Nuxt, Vue, GraphQL, TypeScript, Vite",
+          "role": "Frontend Developer",
+          "what": "Bildschönes Interaction Design, hoher Fokus auf Accessibility und Usability"
+        },
+        "ethioe": {
+          "title": "ETH Immobilienökonomie",
+          "techStack": "Vue, Express, MongoDB, SOAP, REST",
+          "role": "Fullstack Developer, Software Architekt, Interaction Designer",
+          "what": "E-Learning-App für Studierende der Architektur, macht komplexe Kalkulationen sichtbar und fassbar"
+        },
+        "mapi": {
+          "title": "Migros Produktekatalog & Migipedia",
+          "techStack": "Symfony, Bootstrap, Twig, JavaScript",
+          "role": "Fullstack Developer, DevOps",
+          "what": "Vereinfachung der Art und Weise, wie einer der grössten Einzelhändler seine Produkte präsentiert, zusätzlicher Fokus auf Leistung und Kompatibilität"
+        },
+        "oss": {
+          "title": "Verschiedenste Open Source und Freelancing-Projekte",
+          "techStack": "PHP, JavaScript, TypeScript, Python, Java, Drupal, Symfony",
+          "what": "Eine Vielzahl von Bibliotheken, Tools, Paketen usw., die von vielen Projekten und Hunderten von Entwicklern genutzt werden. Werfen Sie einen Blick auf Github!"
+        }
+      },
+      "technologies": {
+        "frontend": {
+          "jsts": "JavaScript und TypeScript",
+          "nuxtVue": "Nuxt, Vue",
+          "react": "React",
+          "buildTools": "Build tools (Vite, Webpack, esbuild)",
+          "css": "CSS with various frameworks"
+        },
+        "backend": {
+          "php": "PHP",
+          "symfony": "Symfony",
+          "laravel": "Laravel",
+          "drupal": "Drupal",
+          "python": "Python"
+        },
+        "data": {
+          "mysqlMariadb": "MySQL/MariaDB",
+          "postgres": "Postgres",
+          "nosql": "MongoDB & similar",
+          "apis": "APIs: GraphQL, REST"
+        },
+        "ops": {
+          "nix": "Linux/*nix-Administration",
+          "docker": "Docker, Docker Compose, Lando, DDEV",
+          "bash": "Bash/ZSH"
+        }
+      },
+      "boxes": {
+        "work": {
+          "label": "Berufserfahrung",
+          "points": [
+            {
+              "title": "Senior Web Developer",
+              "where": "Liip AG, Schweiz",
+              "what": "Arbeit in verschiedensten Teams auf verschiedensten Grossprojekten, von Prototyping zu Fullstack-Implementation von komplexen Features und DevOps. Gelegentlicher stellvertretender Agile Coach, Accessibility-Experte, UX-Designer"
+            },
+            {
+              "title": "Web Developer",
+              "where": "Cinergy AG, Schweiz",
+              "what": "Development, Bugfixing, Systemadministration, 2nd-Level-Support, Deployments, Netzwerkadministration"
+            },
+            {
+              "title": "Buchautor",
+              "where": "Packt, Birmingham",
+              "what": "Titel: \"Mastering CSS Grid: A Comprehensive and Practical Guide to Creating Beautiful Layouts with CSS Grid\". Ein 330-seitiges Buch, um alles über CSS Grid zu lernen. Englisch."
+            },
+            {
+              "title": "Kursautor",
+              "where": "Educative.io",
+              "what": "Kurstitel: \"Advanced VueJS: Build Better Applications Efficiently\". Beinhaltet 51 Lektionen, 57 Code-Playgrounds und 8 Quizzes."
+            },
+            {
+              "title": "Freelancing-Projekte",
+              "where": "",
+              "what": "Webseiten für Vereine, Kleinstunternehmen, Legacy-Refactoring, etc."
+            }
+          ]
+        },
+        "diplomas": {
+          "label": "Diplome und Zertifikate",
+          "points": [
+            {
+              "title": "BSc FHNW in Computer Science mit Vertiefung in Design und Management",
+              "where": "FHNW, Brugg, Schweiz",
+              "what": "Abschlussnote 5.3, ECTS Grade A"
+            },
+            {
+              "title": "EFZ Informatiker Applikationsentwicklung & kaufm. Berufsmatur",
+              "where": "Kantonsschule Enge, Zurich, Schweiz",
+              "what": "Abschlussnote 5.3"
+            },
+            {
+              "title": "Machine Learning Certificate",
+              "where": "Coursera, Stanford University",
+              "what": "Während dem Studium. Verschiedenste ML-Techniken, Mathematik, und Fachwissen über ML, Deepl Learning und ML Pipelines"
+            },
+            {
+              "title": "Zend Certified PHP Engineer ZCPE",
+              "where": "Zend - The PHP Company",
+              "what": "Fachwissen über PHP, seine Spezialitäten und Kernkonzepte"
+            },
+            {
+              "title": "Ersthelfer Stufe 2 IVR 2021",
+              "where": "Samariter Schweiz",
+              "what": "Dazu in der Lage, erweiterte Erste Hilfe in Notsituationen zu leisten"
+            }
+          ]
+        },
+        "awards": {
+          "label": "Preise",
+          "points": [
+            {
+              "title": "Switzerland Splash Awards 2025 Winner Public Affairs/Education",
+              "what": "for bs.ch - Webseite für den Kanton Basel-Stadt"
+            },
+            {
+              "title": "dev.to Top 7 Author Of The Week",
+              "what": "Zeimal im 2021, einmal im 2022"
+            },
+            {
+              "title": "German Design Award - Winner Interactive User Experience",
+              "what": "für ETH Immobilienökonomie"
+            },
+            {
+              "title": "Best of Swiss Web - public affairs silver",
+              "what": "für ETH Immobilienökonomie"
+            },
+            {
+              "title": "Bestehen mit Auszeichnung",
+              "what": "Kantonsschule Enge, Zürich, Schweiz, Abschlussnote 5.3"
+            }
+          ]
+        },
+        "voluntary": {
+          "label": "Führungsqualitäten und Freiwilligenarbeit",
+          "points": [
+            {
+              "title": "Kursleiter für Erste Hilfe, BLS-AED-SRC und Ersthelfer Stufe 1 IVR",
+              "where": "Samariter Region-Thalwil",
+              "what": "Leiter Kurse für Erste Hilfe für den Führerscheinerwerb, Wiederbelebungsmassnahmen, Firmenkurse und Spezialkurse"
+            },
+            {
+              "title": "Notfallsanitäter/Ersthelfer an Veranstaltungen, Messen und Sportanlässen",
+              "where": "Samariter Region-Thalwil",
+              "what": "Leiste Erste Hilfe für Teilnehmende von Veranstaltungen, manchmal als Schichtleiter"
+            },
+            {
+              "title": "Kompaniekommandant des Zivilschutzes",
+              "where": "Zivilschutzorganisation Hardwald",
+              "what": "Verantwortlich für die Vorbereitung und Durchführung von zweiwöchigen Wiederholungskursen, Einsatzleiter in Ernstfallsituationen, Leadership generell und Freiwilligenarbeit"
+            }
+          ]
+        }
+      }
+    },
+    "softSkills": {
+      "label": "Meine Soft Skills",
+      "points": [
+        "Problemlöser",
+        "Teamplayer",
+        "Ich lerne schnell",
+        "Kommunikationsstarke Person",
+        "Zuverlässige Führungskraft",
+        "Widerstandsfähiger Enthusiast"
+      ]
+    },
+    "funFacts": {
+      "label": "Interessantes über mich",
+      "points": [
+        [
+          "Ich habe mit 13 angefangen",
+          "zu programmieren"
+        ],
+        [
+          "Ich liebe es mit Holz",
+          "und Elektronik zu arbeiten"
+        ],
+        [
+          "Ich besitze etwa 200",
+          "Musik-CDs and Platten"
+        ],
+        [
+          "Ich kann auf fünf Arten",
+          "Kaffee zubereiten"
+        ]
+      ]
+    },
+    "learningGoals": {
+      "label": "Meine Lernziele",
+      "points": [
+        "Godot und Gamedev",
+        "Elektronik und Arduino",
+        "Vertieftes UX",
+        "Verbessern meiner Kunstfähigkeiten",
+        "Mehr Arten, Kaffee zu machen"
+      ]
+    },
+    "contactDetails": "Kontaktdetails finden Sie auf",
+    "thisCVWasMadeWith": "Dieser CV wurde mit viel Liebe, HTML, CSS, Nuxt+Vue und Tailwind erstellt. Die Icons sind SVGs, der Rest ist CSS."
+  },
+  "contact": {
+    "seo": {
+      "title": "Kontakt - Pascal Thormeier",
+      "keywords": "Kontakt, geschäftliche Anfragen, E-Mail, Pascal Thormeier, Entwickler"
+    },
+    "title": "Kontaktdetails",
+    "businessContact": {
+      "title": "Geschäftskontakt",
+      "lead": "Falls Sie mich geschäftlich (Aufträge oder Ähnliches) kontaktieren möchten, nutzen Sie bitte folgende E-Mail-Adresse:",
+      "disclaimer": "Bitte beachten Sie, dass ich auf E-Mails von Personalvermittlungen und Drittanbieter-Personalberatern nicht antworten werde."
+    }
+  },
+  "articles": {
+    "seo": {
+      "title": "Artikel - Pascal Thormeier",
+      "keywords": "Artikel, Blog, Programmierung, Entwicklung, Technologie, Pascal Thormeier"
+    },
+    "title": "Meine Artikel",
+    "lead": "Hier ist eine Liste aller Artikel, die ich auf verschiedenen Plattformen und Blogs geschrieben habe. Viel Spass beim Lesen!",
+    "onDevTo": "Artikel auf dev.to",
+    "onOtherPlatforms": "Artikel auf anderen Plattformen"
+  },
+  "book": {
+    "seo": {
+      "title": "Mastering CSS Grid - Pascal Thormeier",
+      "keywords": "CSS Grid, Buch, Webdesign, Layout, Pascal Thormeier, Mastering CSS Grid"
+    },
+    "title": "Über mein Buch \"Mastering CSS Grid\"",
+    "readOnAmazon": "Bei Amazon lesen",
+    "readOnPackt": "Bei packt.com lesen",
+    "cover": "Das Buchcover",
+    "lead": "Entdecken Sie das gesamte Spektrum der CSS Grid-Konzepte und nutzen Sie seine Spezifikationen effizient mit einem Projekt, das sowohl grundlegende als auch fortgeschrittene Aspekte beinhaltet",
+    "keyFeatures": {
+      "title": "Hauptmerkmale",
+      "points": [
+        "Erkunden Sie die Unterschiede zwischen Grid-Boxen und Blockcontainern, um Ihr Webdesign-Wissen zu erweitern",
+        "Erstellen Sie Block-Level-Grids, Inline-Grids und verschachtelte Grids, um responsive Layouts zu entwerfen",
+        "Nutzen Sie Best Practices für das Anbringen von Elementen in Ihrem Layout, indem Sie explizit definierte Grid-Linien oder Grid-Bereiche verwenden"
+      ]
+    },
+    "description": {
+      "title": "Buchbeschreibung",
+      "paragraphs": [
+        "CSS Grid hat das Webdesign revolutioniert, indem es eine lang bestehende Lücke beim Erstellen echter, dynamischer Grids im Web schliesst. Dieses Buch hilft Ihnen, diese CSS Grid-Konzepte Schritt für Schritt zu verstehen und vermittelt Ihnen das Wissen und die Fähigkeiten, um schöne und responsive grid-basierte Layouts für Ihre Webprojekte zu entwerfen.",
+        "Dieses Buch bietet eine umfassende Abdeckung von CSS Grid, indem es Sie sowohl durch grundlegende als auch fortgeschrittene Konzepte mit praktischen Übungen führt. Sie lernen, wie man responsive Layouts erstellt und entdecken Best Practices für die Integration von Grids in jedes Design. Während Sie fortschreiten, werden Sie die dynamische Wechselwirkung zwischen CSS Grid und Flexbox erkunden, die in der Entwicklung eines nutzbaren, responsiven Webprojekts gipfelt, das als Referenz für weitere Verbesserungen dient. Sie werden auch sehen, wie Frameworks CSS Grid nutzen, um wiederverwendbare Komponenten zu erstellen, und lernen, wie man CSS Grid für Browser, die es noch nicht vollständig unterstützen, neu erstellt und polyfillt. Die abschliessenden Kapitel beinhalten eine Kurzanleitung und ein Spickzettel, wodurch dieses Buch zu einer unverzichtbaren Ressource für Frontend-Entwickler aller Erfahrungsstufen wird.",
+        "Am Ende dieses Buches werden Sie alle Aspekte von CSS Grid gründlich erkundet haben und eine Expertenkenntnis erlangt haben, die es Ihnen ermöglicht, schöne und funktionale Layouts für Webprojekte jeder Grösse zu gestalten."
+      ]
+    },
+    "whatYouWillLearn": {
+      "title": "Was Sie lernen werden",
+      "points": [
+        "Verbessern Sie Ihre CSS Grid-Fähigkeiten, indem Sie sowohl die grundlegenden als auch die fortgeschrittenen Konzepte meistern",
+        "Kombinieren Sie Flexbox und CSS Grid nahtlos, um atemberaubende und responsive Seitenlayouts zu erstellen",
+        "Entdecken Sie das Potenzial komplexer Grid-Layouts, um Ihr nächstes Projekt zu verbessern",
+        "Untersuchen Sie, wie Frameworks CSS Grid nutzen, um wiederverwendbare Komponenten zu erstellen",
+        "Nutzen Sie die Vorteile grid-basierter Layouts, um optisch ansprechende Websites zu gestalten",
+        "Erstellen Sie eigene Polyfills und lernen Sie, wann man Grid-Layouts verwendet",
+        "Entwickeln Sie dynamische und benutzerfreundliche Webprojekte unter Verwendung der responsiven Design-Fähigkeiten von CSS Grid"
+      ]
+    },
+    "whoThisBookIsFor": {
+      "title": "Für wen dieses Buch ist",
+      "text": "Dieses Buch richtet sich an Webentwickler und Designer, die CSS Grid lernen und ihre Layout-Design-Fähigkeiten verbessern möchten. Es wird auch eine wertvolle Ressource für CSS-Entwickler sein, die ihre Fähigkeiten auf ein höchstes Niveau bringen wollen. Darüber hinaus dient dieses Buch als exzellenter Leitfaden für diejenigen, die ihr Werkzeugarsenal um Flexbox und Grids erweitern möchten."
+    },
+    "tableOfContents": {
+      "title": "Inhaltsverzeichnis",
+      "points": [
+        "Grundlegende Regeln und Strukturen von CSS Grid verstehen",
+        "Projekteinführung: Woran wir arbeiten und erste Aufgaben",
+        "Erstellung fortgeschrittener Grid-Layouts",
+        "Verständnis und Erstellung responsiver und fliessender Grid-Layouts",
+        "Implementierung von Layouts mit Flexbox und CSS Grid",
+        "Vorteile von Grid-Layouts und wann man sie nicht verwenden sollte",
+        "Polyfilling fehlender CSS Grid-Funktionen",
+        "Grids in der Praxis – Wie Frameworks Grids implementieren",
+        "Kurzanleitung und Spickzettel"
+      ]
+    }
+  }
+}

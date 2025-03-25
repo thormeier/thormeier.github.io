@@ -1,7 +1,7 @@
 <template>
   <main class="container print:max-w-full px-5 md:px-0 mx-auto print:mx-0 my-6">
     <h2 class="font-script text-3xl lg:text-4xl print:text-2xl mb-3">
-      Pascal Thormeier (he/him) &ndash; Senior Software Engineer
+      Pascal Thormeier ({{ $t('resume.pronouns') }}) &ndash; Senior Software Engineer
     </h2>
 
     <ul class="grid-resume mb-10">
@@ -27,22 +27,19 @@
       <li id="resume-box-info" class="p-6 print:p-3 flex flex-col justify-center">
         <StickyNote class="w-full print:w-[90%] mx-auto text-base print:text-sm [&_.sticky-content]:flex-col [&_.sticky-content]:p-2">
           <p class="mb-1">
-            Born 1990-01-15
+            {{ $t('resume.birthDate') }}
           </p>
 
           <p class="mb-1">
-            Living in Zurich, CH
+            {{ $t('resume.location') }}
           </p>
 
           <ul
             class="list-image-[url(~/assets/svg/listItemSmall.svg)] lg:list-image-[url(~/assets/svg/listItem.svg)] ml-3 px-6 print:px-0 print:py-2 print:text-2xs"
           >
-            <li>Curious self-organized doer</li>
-            <li>Team player, leader, coach</li>
-            <li>Passionate about all things web</li>
-            <li>Tech enthusiast in general</li>
-            <li>German (native)</li>
-            <li>English (fluent in<br>written and spoken)</li>
+            <li v-for="(_, i) in new Array(6)" :key="`bulletPoint${i}`">
+              {{ $t(`resume.bulletPoints[${i}]`) }}
+            </li>
           </ul>
         </StickyNote>
       </li>
@@ -69,63 +66,57 @@
       <li>
         <StickyNote class="[&_.sticky-content]:flex-col mx-auto">
           <h3 class="font-bold">
-            My key soft skills
+            {{ $t('resume.softSkills.label') }}
           </h3>
           <ul
             class="list-image-[url(~/assets/svg/listItemSmall.svg)] lg:list-image-[url(~/assets/svg/listItem.svg)] ml-3 px-6 print:px-0 print:py-2 print:text-xs"
           >
-            <li>Problem Solver</li>
-            <li>Team Player</li>
-            <li>Quick Learner</li>
-            <li>Strong Communicator</li>
-            <li>Trusted Leader</li>
-            <li>Resilient Enthusiast</li>
+            <li v-for="(_, i) in new Array(5)" :key="`softSkill${i}`">
+              {{ $t(`resume.softSkills.points[${i}]`) }}
+            </li>
           </ul>
         </StickyNote>
       </li>
       <li>
         <StickyNote class="[&_.sticky-content]:flex-col mx-auto">
           <h3 class="font-bold mb-2">
-            Fun facts about me
+            {{ $t('resume.funFacts.label') }}
           </h3>
           <ul
             class="list-image-[url(~/assets/svg/listItemSmall.svg)] lg:list-image-[url(~/assets/svg/listItem.svg)] ml-3 px-6 print:px-0 print:py-2 print:text-xs"
           >
-            <li>Started programming<br>when I was 13</li>
-            <li>I love woodworking<br>and electronics</li>
-            <li>I own around 200 music<br>CDs and vinyls</li>
-            <li>I have five different<br>ways to make coffee</li>
+            <li v-for="(_, i) in new Array(4)" :key="`funFacts${i}`">
+              {{ $t(`resume.funFacts.points[${i}][0]`) }}<br>{{ $t(`resume.funFacts.points[${i}][1]`) }}
+            </li>
           </ul>
         </StickyNote>
       </li>
       <li>
         <StickyNote class="[&_.sticky-content]:flex-col mx-auto">
           <h3 class="font-bold">
-            My learning goals
+            {{ $t('resume.learningGoals.label') }}
           </h3>
           <ul
             class="list-image-[url(~/assets/svg/listItemSmall.svg)] lg:list-image-[url(~/assets/svg/listItem.svg)] ml-3 px-6 print:px-0 print:py-2 print:text-xs"
           >
-            <li>Godot and Gamedev</li>
-            <li>Electronics and Arduino</li>
-            <li>In-depth UX</li>
-            <li>Refine my artistic skills</li>
-            <li>More ways to make coffee</li>
+            <li v-for="(_, i) in new Array(5)" :key="`learningGoals${i}`">
+              {{ $t(`resume.learningGoals.points[${i}]`) }}
+            </li>
           </ul>
         </StickyNote>
       </li>
     </ul>
 
-    <p class="hidden print:block text-2xl font-bold text-center font-script mt-10">
-      Contact details at
+    <p class="hidden print:block text-2xl font-bold text-center font-script mt-4">
+      {{ $t('resume.contactDetails') }}
       <a href="https://thormeier.dev/contact">
         <TButton :has-border="false" class="text-2xl">
           thormeier.dev/contact
         </TButton>
       </a>
     </p>
-    <p class="hidden print:block text-2xs text-center font-script mt-6">
-      This CV was made with love, HTML, CSS, Nuxt+Vue and Tailwind. Icons are SVGs, the rest is CSS.
+    <p class="hidden print:block text-2xs text-center font-script mt-4">
+      {{ $t('resume.thisCVWasMadeWith') }}
     </p>
   </main>
 </template>
@@ -134,12 +125,18 @@
 import type { Box } from '~/components/Resume/Box.vue'
 import type { Project } from '~/components/Resume/Project.vue'
 import type { Technology } from '~/components/Resume/Technology.vue'
-import resume from '../data/resume.json'
+import { useResume } from '../data/useResume'
+
+const { t } = useI18n()
+const resume = useResume(t)
 
 useHead({
-  title: 'Pascal Thormeier\'s resume',
+  title: t('resume.seo.title'),
   meta: [
-    { name: 'description', content: 'Find out about Pascal Thormeier.' },
+    {
+      name: 'keywords',
+      content: t('resume.seo.keywords'),
+    },
   ],
 })
 

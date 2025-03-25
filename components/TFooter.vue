@@ -2,7 +2,7 @@
   <footer
     class="print:hidden p-3 border-t-2 bg-white flex flex-wrap items-center justify-between"
   >
-    Built with Nuxt and Tailwind, all icons are self-made. &copy; {{ year }}
+    {{ $t('nav.footer') }} &copy; {{ year }}
   </footer>
 </template>
 

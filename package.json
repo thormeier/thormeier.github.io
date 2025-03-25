@@ -12,6 +12,7 @@
     "lint:fix": "eslint --fix"
   },
   "dependencies": {
+    "@nuxtjs/i18n": "^9.2.1",
     "@tailwindcss/vite": "^4.0.1",
     "@vueuse/components": "^12.5.0",
     "@vueuse/core": "^12.5.0",

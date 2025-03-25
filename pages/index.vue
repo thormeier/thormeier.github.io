@@ -10,13 +10,13 @@
       <div class="flex flex-wrap p-8 -mx-2">
         <div class="px-2 w-1/2 sm:w-1/3">
           <StickyNote class="w-full text-xl sm:text-3xl mx-auto">
-            Hey there,<br>I'm Pascal!
+            {{ $t('home.heyThere') }}<br>{{ $t('home.imPascal') }}
           </StickyNote>
         </div>
 
         <div class="px-2 w-1/2 sm:w-1/3">
           <StickyNote class="w-full text-xl sm:text-3xl mx-auto">
-            Get to know<br>me below!
+            {{ $t('home.getToKnow') }}<br>{{ $t('home.meBelow') }}
           </StickyNote>
         </div>
 
@@ -32,36 +32,27 @@
       <AnimatorViewport v-slot="{ visible }">
         <AnimatorBorder :is-active="visible" class="p-10">
           <h2 class="font-script text-3xl lg:text-4xl mb-3">
-            About me
+            {{ $t('home.aboutMe.title') }}
           </h2>
 
           <p class="mb-3 text-xl">
-            Hi, I'm Pascal Thormeier! I am a passionate web developer based in
-            Switzerland who loves to work full-stack with all kinds of
-            technologies.
+            {{ $t('home.aboutMe.p1') }}
           </p>
 
           <p class="mb-3 text-xl">
-            I am a creative problem solver who understands how to systematically
-            find the best solution for all stakeholders. My passion lies in creating
-            high quality software that is actually useful.
+            {{ $t('home.aboutMe.p2') }}
           </p>
 
           <p class="mb-3 text-xl">
-            Thanks to my bachelor studies and around 15 years of experience I
-            have a broad knowledge in different areas: Web development, desktop
-            development, databases, DevOps, UX design and management. I love to
-            share my knowledge and learn new things.
+            {{ $t('home.aboutMe.p3') }}
           </p>
 
           <p class="mb-3 text-xl">
-            I am a pragmatic person. Thinking outside the box and striving to
-            understand the big picture are my strengths and I use these to
-            build solutions that are simple, yet efficient.
+            {{ $t('home.aboutMe.p4') }}
           </p>
 
           <p class="text-xl font-bold">
-            My motto: Choose the right tool for the job.
+            {{ $t('home.aboutMe.motto') }}
           </p>
         </AnimatorBorder>
       </AnimatorViewport>
@@ -71,30 +62,30 @@
       <AnimatorViewport v-slot="{ visible }">
         <AnimatorBorder :is-active="visible" class="p-10">
           <h2 class="font-script text-3xl lg:text-4xl mb-3">
-            Get to know me better
+            {{ $t('home.getToKnowMeBetter.title') }}
           </h2>
 
           <div class="flex flex-wrap justify-center mt-12 mb-20">
-            <NuxtLink to="/resume" class="w-full sm:w-1/3">
+            <NuxtLink :to="localePath('/resume')" class="w-full sm:w-1/3">
               <StickyNote class="w-full mx-auto">
                 <TButton class="text-lg sm:text-2xl">
-                  See my resume
+                  {{ $t('home.getToKnowMeBetter.resume') }}
                 </TButton>
               </StickyNote>
             </NuxtLink>
 
-            <NuxtLink to="/articles" class="w-full sm:w-1/3">
+            <NuxtLink :to="localePath('/articles')" class="w-full sm:w-1/3">
               <StickyNote class="w-full mx-auto">
                 <TButton class="text-lg sm:text-2xl">
-                  Read my articles
+                  {{ $t('home.getToKnowMeBetter.articles') }}
                 </TButton>
               </StickyNote>
             </NuxtLink>
 
-            <NuxtLink to="/contact" class="w-full sm:w-1/3">
+            <NuxtLink :to="localePath('/contact')" class="w-full sm:w-1/3">
               <StickyNote class="w-full mx-auto">
                 <TButton class="text-lg sm:text-2xl">
-                  Contact me
+                  {{ $t('home.getToKnowMeBetter.contact') }}
                 </TButton>
               </StickyNote>
             </NuxtLink>
@@ -110,10 +101,17 @@
 <script lang="ts" setup>
 import AnimatorTape from '~/components/Animator/Tape.vue'
 
+const localePath = useLocalePath()
+
+const { t } = useI18n()
+
 useHead({
-  title: 'Get to know Pascal Thormeier',
+  title: t('home.seo.title'),
   meta: [
-    { name: 'description', content: 'Pascal Thormeier presents himself.' },
+    {
+      name: 'keywords',
+      content: t('home.seo.keywords'),
+    },
   ],
 })
 

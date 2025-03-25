@@ -1,7 +1,7 @@
 <template>
   <main class="container mx-auto my-6 px-5">
     <h2 class="font-script text-3xl lg:text-4xl mb-3">
-      Contact details
+      {{ $t('contact.title') }}
     </h2>
 
     <div class="flex flex-wrap justify-center mt-12 mb-20">
@@ -25,12 +25,11 @@
 
     <div class="curved-border p-6">
       <h3 class="font-script font-bold text-4xl mb-5">
-        Business contact
+        {{ $t('contact.businessContact.title') }}
       </h3>
 
       <p class="text-2xl mb-5">
-        In case you want to contact me for business (commissions or similar)
-        please use the following email address:
+        {{ $t('contact.businessContact.lead') }}
       </p>
 
       <p class="mb-5">
@@ -42,17 +41,22 @@
       </p>
 
       <p class="text-2xl mb-5">
-        Please be aware that I will not be answering emails by recruiting companies and 3rd party recruitment consultants.
+        {{ $t('contact.businessContact.disclaimer') }}
       </p>
     </div>
   </main>
 </template>
 
 <script lang="ts" setup>
+const { t } = useI18n()
+
 useHead({
-  title: 'How to contact Pascal Thormeier',
+  title: t('contact.seo.title'),
   meta: [
-    { name: 'description', content: 'Contact details for Pascal Thormeier.' },
+    {
+      name: 'keywords',
+      content: t('contact.seo.keywords'),
+    },
   ],
 })
 
