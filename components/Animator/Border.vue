@@ -13,7 +13,7 @@
 
 <script lang="ts" setup>
 const props = withDefaults(defineProps<{
-  isActive: boolean
+  isActive?: boolean
   noAnimation?: boolean
 }>(), {
   isActive: false,

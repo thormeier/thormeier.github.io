@@ -10,7 +10,7 @@
 
 <script lang="ts" setup>
 withDefaults(defineProps<{
-  isActive: boolean
+  isActive?: boolean
 }>(), {
   isActive: false,
 })
