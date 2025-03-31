@@ -44,7 +44,7 @@
         </StickyNote>
       </li>
       <li id="resume-box-tech" class="p-3 md:p-6 print:p-3 curved-border">
-        <ResumeTitle title="Technologies" icon-name="spanner" />
+        <ResumeTitle :title="$t('resume.content.technologies.label')" icon-name="spanner" />
         <ul class="grid grid-cols-1 print:grid-cols-2 gap-3 print:gap-2">
           <ResumeTechBox id="fe" :technologies="resume.technologies.frontend" label="Frontend" />
           <ResumeTechBox id="be" :technologies="resume.technologies.backend" label="Backend" />

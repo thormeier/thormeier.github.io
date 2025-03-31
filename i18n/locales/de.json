@@ -80,6 +80,7 @@
         }
       },
       "technologies": {
+        "label": "Technologien",
         "frontend": {
           "jsts": "JavaScript und TypeScript",
           "nuxtVue": "Nuxt, Vue",
