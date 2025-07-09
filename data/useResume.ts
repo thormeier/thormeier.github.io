@@ -152,7 +152,7 @@ export function useResume(t: (s: string) => string) {
             dateStart: '2020-05-12',
             where: t('resume.content.boxes.work.points[5].where'),
             what: t('resume.content.boxes.work.points[5].what'),
-          }
+          },
         ],
       },
       {
