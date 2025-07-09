@@ -117,35 +117,42 @@ export function useResume(t: (s: string) => string) {
         points: [
           {
             title: t('resume.content.boxes.work.points[0].title'),
-            dateStart: '2014-01-01',
+            dateStart: '2025-07-01',
             where: t('resume.content.boxes.work.points[0].where'),
             what: t('resume.content.boxes.work.points[0].what'),
           },
           {
             title: t('resume.content.boxes.work.points[1].title'),
-            dateStart: '2010-07-01',
-            dateEnd: '2013-12-31',
+            dateStart: '2014-01-01',
+            dateEnd: '2025-06-30',
             where: t('resume.content.boxes.work.points[1].where'),
             what: t('resume.content.boxes.work.points[1].what'),
           },
           {
             title: t('resume.content.boxes.work.points[2].title'),
-            dateStart: '2023-06-09',
+            dateStart: '2010-07-01',
+            dateEnd: '2013-12-31',
             where: t('resume.content.boxes.work.points[2].where'),
             what: t('resume.content.boxes.work.points[2].what'),
           },
           {
             title: t('resume.content.boxes.work.points[3].title'),
-            dateStart: '2022-02-18',
+            dateStart: '2023-06-09',
             where: t('resume.content.boxes.work.points[3].where'),
             what: t('resume.content.boxes.work.points[3].what'),
           },
           {
             title: t('resume.content.boxes.work.points[4].title'),
-            dateStart: '2020-05-12',
+            dateStart: '2022-02-18',
             where: t('resume.content.boxes.work.points[4].where'),
             what: t('resume.content.boxes.work.points[4].what'),
           },
+          {
+            title: t('resume.content.boxes.work.points[5].title'),
+            dateStart: '2020-05-12',
+            where: t('resume.content.boxes.work.points[5].where'),
+            what: t('resume.content.boxes.work.points[5].what'),
+          }
         ],
       },
       {
@@ -197,33 +204,39 @@ export function useResume(t: (s: string) => string) {
         points: [
           {
             title: t('resume.content.boxes.awards.points[0].title'),
-            dateStart: '2025-03-11',
+            dateStart: '2025-04-03',
             dateEnd: null,
             what: t('resume.content.boxes.awards.points[0].what'),
           },
           {
             title: t('resume.content.boxes.awards.points[1].title'),
-            dateStart: '2021-02-09',
+            dateStart: '2025-03-11',
             dateEnd: null,
             what: t('resume.content.boxes.awards.points[1].what'),
           },
           {
             title: t('resume.content.boxes.awards.points[2].title'),
-            dateStart: '2019-02-08',
+            dateStart: '2021-02-09',
             dateEnd: null,
             what: t('resume.content.boxes.awards.points[2].what'),
           },
           {
             title: t('resume.content.boxes.awards.points[3].title'),
-            dateStart: '2018-04-12',
+            dateStart: '2019-02-08',
             dateEnd: null,
             what: t('resume.content.boxes.awards.points[3].what'),
           },
           {
             title: t('resume.content.boxes.awards.points[4].title'),
-            dateStart: '2010-06-30',
+            dateStart: '2018-04-12',
             dateEnd: null,
             what: t('resume.content.boxes.awards.points[4].what'),
+          },
+          {
+            title: t('resume.content.boxes.awards.points[5].title'),
+            dateStart: '2010-06-30',
+            dateEnd: null,
+            what: t('resume.content.boxes.awards.points[5].what'),
           },
         ],
       },

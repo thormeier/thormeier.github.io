@@ -112,6 +112,11 @@
           "label": "Berufserfahrung",
           "points": [
             {
+              "title": "Software Developer GIS",
+              "where": "Kanton Zürich, Baudirektion",
+              "what": "Entwicklung von GIS-Applikationen, DevOps"
+            },
+            {
               "title": "Senior Web Developer",
               "where": "Liip AG, Schweiz",
               "what": "Arbeit in verschiedensten Teams auf verschiedensten Grossprojekten, von Prototyping zu Fullstack-Implementation von komplexen Features und DevOps. Gelegentlicher stellvertretender Agile Coach, Accessibility-Experte, UX-Designer"
@@ -172,8 +177,12 @@
           "label": "Preise",
           "points": [
             {
+              "title": "Best of Swiss Web - user experience bronze",
+              "what": "für bs.ch - Webseite für den Kanton Basel-Stadt"
+            },
+            {
               "title": "Switzerland Splash Awards 2025 Winner Public Affairs/Education",
-              "what": "for bs.ch - Webseite für den Kanton Basel-Stadt"
+              "what": "für bs.ch - Webseite für den Kanton Basel-Stadt"
             },
             {
               "title": "dev.to Top 7 Author Of The Week",

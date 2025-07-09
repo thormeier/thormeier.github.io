@@ -1,10 +1,10 @@
 <template>
-  <main class="container print:max-w-full px-5 md:px-0 mx-auto print:mx-0 my-6">
+  <main class="container print:max-w-full px-5 md:px-0 mx-auto print:mx-0 my-6 print:my-4">
     <h2 class="font-script text-3xl lg:text-4xl print:text-2xl mb-3">
       Pascal Thormeier ({{ $t('resume.pronouns') }}) &ndash; Senior Software Engineer
     </h2>
 
-    <ul class="grid-resume mb-10">
+    <ul class="grid-resume mb-10 print:mb-4 ">
       <li id="resume-box-photo" class="image relative">
         <div
           class="tape tape-topleft animated small-nomargin"
@@ -107,7 +107,7 @@
       </li>
     </ul>
 
-    <p class="hidden print:block text-2xl font-bold text-center font-script mt-4">
+    <p class="hidden print:block text-2xl font-bold text-center font-script mt-4 print:mt-2">
       {{ $t('resume.contactDetails') }}
       <a href="https://thormeier.dev/contact">
         <TButton :has-border="false" class="text-2xl">
@@ -115,7 +115,7 @@
         </TButton>
       </a>
     </p>
-    <p class="hidden print:block text-2xs text-center font-script mt-4">
+    <p class="hidden print:block text-2xs text-center font-script mt-4 print:mt-2">
       {{ $t('resume.thisCVWasMadeWith') }}
     </p>
   </main>
