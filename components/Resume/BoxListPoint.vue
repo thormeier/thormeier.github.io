@@ -5,7 +5,7 @@
       <span class="md:whitespace-nowrap print:whitespace-nowrap">
         (<template
           v-if="dateEnd === undefined"
-        >since </template>{{ dateStartFormatted
+        >{{ `${t('since')} ` }}</template>{{ dateStartFormatted
         }}<template
           v-if="dateEnd"
         >
@@ -33,6 +33,8 @@ export interface Point {
 }
 
 const props = defineProps<Point>()
+
+const { t } = useI18n()
 
 function formatDate(date: string) {
   const d = new Date(date)

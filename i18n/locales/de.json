@@ -7,6 +7,7 @@
     "paypal": "Unterstütze mich auf Paypal",
     "footer": "Gebaut mit Nuxt und Tailwind, alle Icons sind selbstgemacht."
   },
+  "since": "seit",
   "home": {
     "seo": {
       "title": "Startseite - Pascal Thormeier",
@@ -114,7 +115,7 @@
             {
               "title": "Software Developer GIS",
               "where": "Kanton Zürich, Baudirektion",
-              "what": "Entwicklung von GIS-Applikationen, DevOps"
+              "what": "Entwicklung von GIS-Applikationen, Web Development, DevOps"
             },
             {
               "title": "Senior Web Developer",

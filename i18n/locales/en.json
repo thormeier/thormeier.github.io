@@ -31,6 +31,7 @@
       "contact": "Contact me"
     }
   },
+  "since": "since",
   "resume": {
     "seo": {
       "title": "Resume - Pascal Thormeier",
@@ -114,7 +115,7 @@
             {
               "title": "Software Developer GIS",
               "where": "Kanton Zürich, Baudirektion",
-              "what": "Development of GIS applications, DevOps"
+              "what": "Development of GIS applications, Web Development, DevOps"
             },
             {
               "title": "Senior Web Developer",
