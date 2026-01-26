@@ -500,38 +500,38 @@
   }
 
   .grid-resume {
-    @apply grid gap-5 print:gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3;
+    @apply grid gap-5 print:gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-6 print:grid-cols-6;
   }
 
   #resume-box-photo {
-    @apply col-start-1 row-start-1;
+    @apply col-start-1 row-start-1 col-span-2;
   }
 
   #resume-box-info {
-    @apply lg:col-start-2 lg:row-start-1 print:col-start-2 print:row-start-1;
+    @apply lg:col-start-3 lg:col-span-2 lg:row-start-1 print:col-start-3 lg:col-span-2 print:row-start-1 print:col-span-2;
   }
 
   #resume-box-tech {
-    @apply lg:col-start-3 lg:row-start-1 lg:row-span-2 print:col-start-3 print:row-start-1 print:row-span-2;
+    @apply lg:col-start-5 lg:col-span-2 lg:row-start-1 lg:row-span-2 print:col-start-5 print:row-start-1 print:row-span-2 print:col-span-2;
   }
 
   #resume-box-work {
-    @apply lg:col-start-1 lg:col-span-2 lg:row-start-2 print:col-start-1 print:col-span-2 print:row-start-2;
+    @apply lg:col-start-1 lg:col-span-4 lg:row-start-2 print:col-start-1 print:col-span-4 print:row-start-2;
   }
 
   #resume-box-projects {
-    @apply lg:col-start-1 lg:col-span-3 md:row-start-3 print:col-start-1 print:col-span-3 print:row-start-3;
+    @apply lg:col-start-1 lg:col-span-6 md:row-start-3 print:col-start-1 print:col-span-6 print:row-start-3;
   }
 
   #resume-box-awards {
-    @apply print:mt-5 lg:col-start-1 lg:row-start-4 print:col-start-1 print:row-start-4;
+    @apply print:mt-5 lg:col-start-1 lg:col-span-3 lg:row-start-4 print:col-start-1 print:row-start-4 print:col-span-3;
   }
 
   #resume-box-diplomas {
-    @apply print:mt-5 lg:col-start-2 lg:col-span-2 lg:row-start-4 print:col-start-2 print:col-span-2 print:row-start-4;
+    @apply print:mt-5 lg:col-start-4 lg:col-span-3 lg:row-start-4 print:col-start-4 print:col-span-3 print:row-start-4;
   }
 
   #resume-box-leadershipAndVolunteering {
-    @apply lg:col-start-1 lg:col-span-3 lg:row-start-5 print:col-start-1 print:col-span-3 print:row-start-5;
+    @apply lg:col-start-1 lg:col-span-6 lg:row-start-5 print:col-start-1 print:col-span-6 print:row-start-5;
   }
 }

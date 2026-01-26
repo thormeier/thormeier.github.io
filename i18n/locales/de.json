@@ -72,7 +72,7 @@
           "title": "Migros Produktekatalog & Migipedia",
           "techStack": "Symfony, Bootstrap, Twig, JavaScript",
           "role": "Fullstack Developer, DevOps",
-          "what": "Vereinfachung der Art und Weise, wie einer der grössten Einzelhändler seine Produkte präsentiert, zusätzlicher Fokus auf Leistung und Kompatibilität"
+          "what": "Vereinfachung der Produktpräsentation einer der grössten schweizer Einzelhändler, zusätzlicher Fokus auf Leistung und Kompatibilität"
         },
         "oss": {
           "title": "Verschiedenste Open Source und Freelancing-Projekte",
@@ -177,6 +177,10 @@
         "awards": {
           "label": "Preise",
           "points": [
+            {
+              "title": "International Splash Awards 2025 Winner Government & Public services / Healthcare",
+              "what": "für bs.ch - Webseite für den Kanton Basel-Stadt"
+            },
             {
               "title": "Best of Swiss Web - user experience bronze",
               "what": "für bs.ch - Webseite für den Kanton Basel-Stadt"
