@@ -504,11 +504,11 @@
   }
 
   #resume-box-photo {
-    @apply col-start-1 row-start-1 col-span-2;
+    @apply col-start-1 row-start-1 md:col-span-2 print:col-span-2;
   }
 
   #resume-box-info {
-    @apply lg:col-start-3 lg:col-span-2 lg:row-start-1 print:col-start-3 lg:col-span-2 print:row-start-1 print:col-span-2;
+    @apply lg:col-start-3 md:col-span-2 lg:row-start-1 print:col-start-3 lg:col-span-2 print:row-start-1 print:col-span-2;
   }
 
   #resume-box-tech {
